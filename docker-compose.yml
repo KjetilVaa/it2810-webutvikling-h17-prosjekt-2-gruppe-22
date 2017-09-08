@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  node:
+    build:
+      context: .
+      dockerfile: Dockerfile.node
+    container_name: tdt2810-g22-p2
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/srv/app
+    command: npm start
+    tty: true
+    stdin_open: true
