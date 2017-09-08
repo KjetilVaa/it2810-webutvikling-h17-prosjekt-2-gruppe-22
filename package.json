@@ -1,0 +1,29 @@
+{
+  "name": "it2810-g22-p2",
+  "version": "0.0.1",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./server/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IT2810/it2810-webutvikling-h17-prosjekt-2-gruppe-22.git"
+  },
+  "keywords": [
+    "node",
+    "jquery",
+    "it2810"
+  ],
+  "author": "it2810-g22",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IT2810/it2810-webutvikling-h17-prosjekt-2-gruppe-22/issues"
+  },
+  "homepage": "https://github.com/IT2810/it2810-webutvikling-h17-prosjekt-2-gruppe-22#readme",
+  "dependencies": {
+    "express": "^4.15.4",
+    "jquery": "^3.2.1"
+  }
+}
