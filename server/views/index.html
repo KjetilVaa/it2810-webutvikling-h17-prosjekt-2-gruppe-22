@@ -1,17 +1,54 @@
 <!DOCTYPE html>
-
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-
-  <title>Prosjekt 2</title>
-  <meta name="description" content="Prosjekt 2">
-  <meta name="author" content="SitePoint">
-
-  <link rel="stylesheet" href="css/styles.css?v=1.0">
-</head>
-
-<body>
-  <script src=""></script>
-</body>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Ole Anders Stokker">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="icon" href="./static/tree.ico" type="image/x-icon"/>
+        <link rel="shortcut icon" href="./static/tree.ico" type="image/x-icon"/>
+    </head>
+    <body>
+        <div class="header">
+            <a id="logo">
+                <img id="logo-img" src="./static/tree.ico" alt="Logo">
+                <h1 id="logo-text">Earth</h1>
+            </a>
+            <div class ="navigation">
+                <a id="footer-anchor-button" class="navigation-element">
+                    <h3 class="navigation-text">Footer</h3>
+                </a>
+                <a id="pictures-anchor-button" class="navigation-element">
+                    <h3 class="navigation-text">Pictures</h3>
+                </a>
+                <a id="description-anchor-button" class="navigation-element">
+                    <h3 class="navigation-text">Description</h3>
+                </a>
+                <a id="top-anchor-button" class="navigation-element">
+                    <h3 class="navigation-text">Top</h3>
+                </a>
+            </div>	
+        </div>
+        <div class="main-picture-container">
+            <img id="main-picture" src="./static/main-picture-3840x2160.jpg" />
+        </div>
+        <div id="main" class="container">
+            <br/>
+            <div id="description" class="top">
+                <h2 class="top-header">I don't really know what I'm thankful for more than the earth we live on.</h2>
+                <br/>
+                <p class="top-content">This page showcases how beautiful the earth can be!</p>
+                <p class="top-content">It works by querying reddit's 'r/earthporn' section for a json response containing the currently top rated post from the last 24 hours</p>
+            </div>
+            <br/>
+            <div id="pictures" class="earth-picture-container"></div>
+            <div class="button-container">
+                <button id="load-more-pictures" class="button">Load More</button>
+            </div>
+        </div>
+        <div id="footer">
+        </div>
+        <script src="./js/earth.js"></script>
+        <script src="./static/script.js"></script>
+    </body>
 </html>
