@@ -1,5 +1,4 @@
-const $ = require('jquery')
+import $ from 'jquery'
 $(document).ready(() => {
-    console.log('dhgksdgk')
     $('body').append(`<p>Appended text</p>.`);
 })
