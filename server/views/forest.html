@@ -1,18 +1,5 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="header">
-    <a id="logo">
-        <img id="logo-img" src="./static/tree.ico" alt="Logo">
-        <h1 id="logo-text">Earth</h1>
-    </a>
-    <div class ="navigation">
-        {% for anchor in anchors %}
-        <a id="{{anchor.anchor_button}}" class="navigation-element">
-            <h3 class="navigation-text">{{anchor.anchor_name}}</h3>
-        </a>
-        {% endfor %}
-    </div>	
-</div>
 <div class="main-picture-container">
     <img id="main-picture" src="./static/main-picture-3840x2160.jpg" />
 </div>
