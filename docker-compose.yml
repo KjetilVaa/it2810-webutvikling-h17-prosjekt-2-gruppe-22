@@ -14,5 +14,6 @@ services:
     command: npm start
     environment:
       - P2_PORT
+      - P2_HOST
     tty: true
     stdin_open: true
