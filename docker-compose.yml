@@ -8,8 +8,12 @@ services:
     container_name: tdt2810-g22-p2
     ports:
       - "8000:8000"
+      - "8082:8082"
     volumes:
       - .:/srv/app
     command: npm start
+    environment:
+      - P2_PORT
+      - P2_HOST
     tty: true
     stdin_open: true
