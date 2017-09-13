@@ -10,8 +10,9 @@
     <body>
         <div class="header">
             <a id="logo">
-                <img id="logo-img" src="./static/tree.ico" alt="Logo">
-                <h1 id="logo-text">Earth</h1>
+                <!--<img id="logo-img" src="./static/tree.ico" alt="Logo">-->
+                <img id="logo-img" src="/public/media/earth.jpg" alt="Earth">
+                <h1 id="logo-text">Logo</h1>
             </a>
             <div class ="navigation">
                 {% for anchor in anchors %}
@@ -19,7 +20,7 @@
                     <h3 class="navigation-text {% if active === anchor.link %}active{% endif %}">{{anchor.name}}</h3>
                 </a>
                 {% endfor %}
-            </div>	
+            </div>
         </div>
         {% block content %}
         {% endblock %}
