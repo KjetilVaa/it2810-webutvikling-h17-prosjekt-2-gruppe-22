@@ -1,13 +1,26 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <meta name="author" content="Ole Anders Stokker">
+        <meta name="author" content="Group 22">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="/public/css/style.css">
         <link rel="icon" href="./static/tree.ico" type="image/x-icon"/>
         <link rel="shortcut icon" href="./static/tree.ico" type="image/x-icon"/>
     </head>
     <body>
+        <div class="header">
+            <a id="logo">
+                <img id="logo-img" src="./static/tree.ico" alt="Logo">
+                <h1 id="logo-text">Earth</h1>
+            </a>
+            <div class ="navigation">
+                {% for anchor in anchors %}
+                <a id="{{anchor.button}}" class="navigation-element" href="{{anchor.link}}">
+                    <h3 class="navigation-text {% if active === anchor.link %}active{% endif %}">{{anchor.name}}</h3>
+                </a>
+                {% endfor %}
+            </div>	
+        </div>
         {% block content %}
         {% endblock %}
     </body>
