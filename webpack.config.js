@@ -4,9 +4,9 @@ var webpack = require('webpack')
 module.exports = {
   context: __dirname,
   devtool: debug ? "inline-sourcemap" : null,
-  entry: "./server/js/index.js",
+  entry: "./client/js/index.js",
   output: {
-    path: __dirname + "/dist",
+    path: __dirname + "/public/js/",
     filename: "script.js"
   },
   plugins: debug ? [] : [
