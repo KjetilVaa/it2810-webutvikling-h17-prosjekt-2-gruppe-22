@@ -10,18 +10,17 @@ let renderPictures = (pictures) => {
             type: 'div',
             className: 'earth-picture-card'
         })
-        let title = new Element({
-            type: 'p',
-            inner: picture.title,
-            className: 'earth-picture-title'
-        })
         let img = new Element({
             id: picture.id,
             type: 'img',
             src: picture.url,
             className: 'earth-picture'
         })
-        card.render(document.querySelector('.earth-picture-container'), [img, title])
+        card.render(document.querySelector('.earth-picture-container'), [img])
+
+        $('.earth-picture-card').click(function() {
+            fullPicture("flex", event.target)
+        })
     })
 }
 
@@ -44,6 +43,8 @@ let fetchAndRender = (API) => {
         renderPictures(pictures)
     })
 }
+
+
 
 let main = () => {
     document.getElementById('load-more-pictures').addEventListener('click', fetchAndRender)
@@ -107,7 +108,16 @@ class APIQueryer {
     }
 }
 
+function fullPicture (type, element) {
+    document.getElementById("faded").style.display = type
+    document.getElementById("overlay-container").style.display = type
+    console.log(element)
+    document.getElementById("overlay-picture").src = element.src
+}
+
 let earthAPI = new APIQueryer(PICTURE_API_BASE, PICTURE_API_URL, PICTURE_API_LIMIT)
 
 // Initialize the  main JavaScript
 document.addEventListener("DOMContentLoaded", main())
+
+
