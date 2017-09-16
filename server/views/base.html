@@ -3,16 +3,15 @@
         <meta charset="UTF-8">
         <meta name="author" content="Group 22">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="/public/css/navbar.css">
         <link rel="stylesheet" type="text/css" href="/public/css/style.css">
         <link rel="icon" href="./static/tree.ico" type="image/x-icon"/>
         <link rel="shortcut icon" href="./static/tree.ico" type="image/x-icon"/>
     </head>
     <body>
         <div class="header">
-            <a id="logo">
-                <!--<img id="logo-img" src="./static/tree.ico" alt="Logo">-->
-                <img id="logo-img" src="/public/media/earth.jpg" alt="Earth">
-                <h1 id="logo-text">Logo</h1>
+            <a id="logo" href="/">
+                <img id="logo-img" src="/public/media/earth.png" alt="Earth"/>
             </a>
             <div class ="navigation">
                 {% for anchor in anchors %}
