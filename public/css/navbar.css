@@ -5,7 +5,7 @@
 	display: grid;
 	width: 100%;
 	top: 0;
-	height: 3rem;
+	height: 4.5rem;
 	overflow: hidden;
 	border-bottom: 2px #00bfc0 solid;
 	background-color: white;
@@ -14,36 +14,30 @@
 
 }
 #logo {
-	display: -webkit-flex;
 	display: flex;
-	align-items: center;
+	display: -webkit-flex;
 	height: 100%;
 	width: 100%;
 	grid-column-start: 2;
 	grid-column-end: 3;
 }
-#logo-text {
-	font-size: 2rem;
-	flex: 1;
-}
 #logo-img {
-	height: 3rem;
-	max-width: 3rem;
+	height: 3.5rem;
+	max-width: 3.5rem;
 	margin-right: 1rem;
 	flex: 1;
 	-webkit-flex: 1;
 }
 .navigation {
-	height: 100%;
   display: flex;
 	display: -webkit-flex;
-	justify-content: center;
 	flex-wrap: wrap;
 	-webkit-flex-wrap: wrap;
+	height: 100%;
 }
 
 .navigation-text {
-	font-size: 1.2rem;
+	font-size: 1.6rem;
 }
 
 .navigation-element {
@@ -51,7 +45,6 @@
 	display: -webkit-flex;
 	padding-left: 2%;
 	padding-right: 2%;
-	align-items: center;
 	height: 100%;
 }
 
