@@ -3,36 +3,53 @@
 .header {
 	display: flex;
 	display: -webkit-flex;
+	align-items: center;
 	background-color: white;
-	border-bottom: 2px #333 solid;
+	border-bottom: 2px #294168 solid;
+	height: 6rem;
 	position: fixed;
 	overflow: hidden;
 	width: 100%;
 	z-index: 100;
 }
+#logo{
+	display: flex;
+	display: -webkit-flex;
+	width: 10%;
+	justify-content: center;
+	-webkit-flex-justify-content: center;
+}
 #logo-img {
-	height: 3.6rem;
-	max-width: 3.6rem;
-	margin: 2rem;
+	height: 3.9rem;
+	max-width: 3.9rem;
+}
+.nav-img {
+	height: 3.4rem;
+	max-width: 3.4rem;
 }
 .navigation {
   display: flex;
 	display: -webkit-flex;
 	height: 100%;
+	width: 80%;
+	background-color: pink;
+	justify-content: center;
+	-webkit-flex-justify-content: center;
 }
-
 .navigation-text {
 	font-size: 1.6rem;
 	color: #333;
 }
-
 .navigation-element {
-	display: flex;
-	display: -webkit-flex;
-	padding-left: 2%;
-	padding-right: 2%;
+	padding-left: 5%;
+	padding-right: 5%;
 }
-
-.navigation-element:hover {
-	background-color:#f7f7ff;
+#logo:hover {
+	transform: scale(1.2, 1.2);
+}
+.navigation-element:hover, .active{
+	transform: scale(1.5, 1.5);
+}
+.active:hover {
+	transform: scale(1, 1);
 }
