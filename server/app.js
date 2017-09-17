@@ -13,10 +13,10 @@ nunjucks.configure('server/views', {
 })
 
 const anchors = [
-    {button: "pictures-anchor-button", Source: "/public/media/water.png", name: "Water", link: "/water"},
-    {button: "top-anchor-button", Source: "/public/media/mountain.png", name: "Mountain", link: "/mountain"},
-    {button: "description-anchor-button", Source: "/public/media/forest.png", name: "Forest", link: "/forest"},
-    {button: "top-anchor-button", Source: "/public/media/city.png", name: "City", link: "/city"}
+    {button: "pictures-anchor-button", img: "/public/media/water.png", name: "Water", link: "/water"},
+    {button: "top-anchor-button", img: "/public/media/mountain.png", name: "Mountain", link: "/mountain"},
+    {button: "description-anchor-button", img: "/public/media/forest.png", name: "Forest", link: "/forest"},
+    {button: "top-anchor-button", img: "/public/media/city.png", name: "City", link: "/city"}
 ]
 
 app.use('/public', express.static('./public'))
