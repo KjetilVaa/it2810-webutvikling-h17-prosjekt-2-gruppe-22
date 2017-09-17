@@ -32,7 +32,7 @@
 	display: -webkit-flex;
 	height: 100%;
 	width: 80%;
-	background-color: pink;
+	/*background-color: pink;*/
 	justify-content: center;
 	-webkit-flex-justify-content: center;
 }
