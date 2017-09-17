@@ -10,10 +10,22 @@
     </head>
     <body>
         <div class="header">
-            <a href="/">
+            <a id="logo" href="/">
                 <img id="logo-img" src="/public/media/earth.png" alt="Earth"/>
             </a>
             <div class ="navigation">
+                <!--<a class="navigation-element">
+                    <img src="/public/media/water.png" alt="water" class="nav-img"/>
+                </a>
+                <a class="navigation-element">
+                    <img src="/public/media/mountain.png" alt="mountain" class="nav-img"/>
+                </a>
+                <a class="navigation-element">
+                    <img src="/public/media/forest.png" alt="forest" class="nav-img"/>
+                </a>
+                <a class="navigation-element">
+                    <img src="/public/media/city.png" alt="city" class="nav-img"/>
+                </a>-->
                 {% for anchor in anchors %}
                 <a id="{{anchor.button}}" class="navigation-element" href="{{anchor.link}}">
                     <h3 class="navigation-text {% if active === anchor.link %}active{% endif %}">{{anchor.name}}</h3>
