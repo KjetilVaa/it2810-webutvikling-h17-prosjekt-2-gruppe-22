@@ -16,6 +16,7 @@ a {
 }
 a:hover {
 	color:#00bfc0;
+	cursor: hand;
 }
 h3 {
 	font-size: 30px;
