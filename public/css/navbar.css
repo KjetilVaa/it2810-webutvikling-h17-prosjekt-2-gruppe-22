@@ -69,8 +69,15 @@
 	transform: scale(1.2, 1.2);
 }
 
-.navigation-element:hover, .active{
+.navigation-element:hover{
 	transform: scale(1.5, 1.5);
+}
+
+.active {
+	border-bottom: 4px #294168 solid;
+  /*display:inline-block;
+	border-radius: 100%;
+  line-height:200px;*/
 }
 
 .active:hover {
