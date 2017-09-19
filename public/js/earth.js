@@ -16,7 +16,7 @@ let renderPictures = (pictures) => {
             src: picture.url,
             className: 'earth-picture'
         })
-        card.render(document.querySelector('.earth-picture-container'), [img])
+        card.render(document.querySelector('.picture-container'), [img])
 
         $('.earth-picture-card').click(() => fullPicture("flex", event.target))
     })
