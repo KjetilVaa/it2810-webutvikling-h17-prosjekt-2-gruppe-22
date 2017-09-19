@@ -8,7 +8,7 @@
 }
 
 h1 {
-	color: #00bfc0; 
+	color: #00bfc0;
 	font-family: 'Source Sans Pro', sans-serif;
 }
 a {
@@ -16,6 +16,7 @@ a {
 }
 a:hover {
 	color:#00bfc0;
+	cursor: hand;
 }
 h3 {
 	font-size: 30px;
@@ -23,13 +24,9 @@ h3 {
 	color:#00bfc0;
 }
 
-.active {
-	background-color: red;
-}
-
 body {
 	background :#f0f0f0;
-	font-size: 17px; 
+	font-size: 17px;
 	line-height: 1.4;
 	font-family: 'Jaldi', sans-serif;
 	font-family: sans-serif;
@@ -165,68 +162,4 @@ body {
 .iconLeft {
 	width: 2rem;
 	margin-right: 0.5rem;
-}
-
-/* Navbar style */
-
-.header {
-	position: fixed;
-	display: grid;
-	width: 100%; 
-	top: 0;
-	height: 3rem; 
-	overflow: hidden;
-	border-bottom: 2px #00bfc0 solid;
-	background-color: white; 
-	z-index: 100;
-	grid-template-columns: 1% 8% auto 60% 1% ;
-	
-}
-#logo {
-	display: -webkit-flex;
-	display: flex;
-	align-items: center;
-	height: 100%;
-	width: 100%;
-	grid-column-start: 2;
-	grid-column-end: 3;	
-}
-#logo-text {
-	font-size: 2rem;
-	flex: 1;
-}
-#logo-img {
-	height: 2.5rem;
-	max-width: 2rem;
-	margin-right: 1rem;
-	flex: 1;
-	-webkit-flex: 1;
-}
-.navigation {
-	grid-column-start: 4;
-	grid-column-end: 5;
-	height: 100%;
-    display: flex;
-	display: -webkit-flex;
-	flex-wrap: wrap;
-	-webkit-flex-wrap: wrap;
-	flex-direction: row-reverse;
-	-webkit-flex-direction: row-reverse;
-}
-
-.navigation-text {
-	font-size: 1.2rem;
-}
-
-.navigation-element {
-	display: flex;
-	display: -webkit-flex;
-	padding-left: 2%;
-	padding-right: 2%;
-	align-items: center;
-	height: 100%;
-}
-
-.navigation-element:hover {
-	background-color:#f7f7ff;
 }
