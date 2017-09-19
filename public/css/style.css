@@ -44,7 +44,9 @@ body {
 .nosupport {
 	text-align: center;
 }
-
+#main {
+	margin-top:4rem;
+}
 .top {
 	text-align: center;
 	background-color: white;
