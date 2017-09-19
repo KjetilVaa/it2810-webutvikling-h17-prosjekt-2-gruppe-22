@@ -2,7 +2,6 @@
 {% block content %}
 
 <div id="faded"></div>
-
 <div id="overlay-container">
     <img id="exit-button" src="./public/images/exit.png" onclick="fullPicture('none')">
     <div class="overlay-info-container">
@@ -15,19 +14,11 @@
         <img id="overlay-picture" src="./public/images/test.jpg" alt="City at night">
     </div>
 </div>
-
-<div class="main-picture-container">
-    <img id="main-picture" src="./static/main-picture-3840x2160.jpg" />
-</div>
-<div id="main" class="container">
-    <br/>
-    <div id="description" class="top">
+<div class="container">
+    <div class="top">
         <h2 class="top-header">The cities of the world</h2>
     </div>
-    <br/>
-    <div id="pictures" class="earth-picture-container">
-
-    </div>
+    <div class="picture-container"></div>
     <div class="button-container">
         <button id="load-more-pictures" class="button">Load More</button>
     </div>
@@ -37,5 +28,4 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="./public/js/earth.js"></script>
 <script src="./public/js/script.js"></script>
-
 {% endblock %}
