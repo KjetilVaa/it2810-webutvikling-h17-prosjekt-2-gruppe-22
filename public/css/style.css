@@ -5,27 +5,6 @@
 	font-family: sans-serif;
 	font-weight: bold;
 }
-
-h1 {
-	color: #00bfc0;
-	font-family: 'Source Sans Pro', sans-serif;
-}
-a {
-	text-decoration:none;
-}
-a:hover {
-	color:#00bfc0;
-}
-h3 {
-	font-size: 30px;
-	font-family: 'Source Sans Pro', sans-serif;
-	color:#00bfc0;
-}
-
-.active {
-	background-color: red;
-}
-
 body {
 	background :#f0f0f0;
 	font-size: 17px;
@@ -34,14 +13,9 @@ body {
 	font-family: sans-serif;
 	font-weight: bold;
 }
-
 .container {
 	padding: 2rem;
 	min-height: 100vh;
-}
-
-.nosupport {
-	text-align: center;
 }
 #main {
 	margin-top:4rem;
@@ -57,26 +31,6 @@ body {
 	margin:2rem;
 	margin-top:6rem;
 }
-
-.top-content {
-	font-size: 1rem;
-}
-
-#main-picture {
-	position: relative;
-	max-width: 100%;
-	max-height: 100%;
-	min-width: 100%;
-	z-index: -100;
-}
-
-#main-arrow {
-	transform: rotate(90deg);
-	position: absolute;
-	margin-top: 1em;
-	z-index: 2;
-}
-
 .main-picture-container {
 	position: relative;
 	max-width: 100%;
