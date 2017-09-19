@@ -18,9 +18,7 @@ let renderPictures = (pictures) => {
         })
         card.render(document.querySelector('.earth-picture-container'), [img])
 
-        $('.earth-picture-card').click(function() {
-            fullPicture("flex", event.target)
-        })
+        $('.earth-picture-card').click(() => fullPicture("flex", event.target))
     })
 }
 

@@ -11,7 +11,7 @@ services:
       - "8082:8082"
     volumes:
       - .:/srv/app
-    command: npm start
+    command: bash -c "./node_modules/.bin/webpack && npm start"
     environment:
       - P2_PORT
       - P2_HOST
