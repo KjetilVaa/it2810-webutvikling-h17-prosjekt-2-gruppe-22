@@ -1,3 +1,175 @@
+
+* {
+	margin: auto 0;
+	line-height: 1.4;
+	font-family: 'Jaldi', sans-serif;
+	font-family: sans-serif;
+	font-weight: bold;
+}
+
+h1 {
+	color: #00bfc0;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+a {
+	text-decoration:none;
+}
+a:hover {
+	color:#00bfc0;
+}
+h3 {
+	font-size: 30px;
+	font-family: 'Source Sans Pro', sans-serif;
+	color:#00bfc0;
+}
+
+.active {
+	background-color: red;
+}
+
+body {
+	background :#f0f0f0;
+	font-size: 17px;
+	line-height: 1.4;
+	font-family: 'Jaldi', sans-serif;
+	font-family: sans-serif;
+	font-weight: bold;
+}
+
+.container {
+	padding: 2rem;
+	min-height: 100vh;
+}
+
+.nosupport {
+	text-align: center;
+}
+
+.top {
+	text-align: center;
+	background-color: white;
+	color: #5d5d5d;
+	padding: 1.5em;
+	box-sizing: border-box;
+	box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 2px;
+}
+
+.top-content {
+	font-size: 1rem;
+}
+
+#main-picture {
+	position: relative;
+	max-width: 100%;
+	max-height: 100%;
+	min-width: 100%;
+	z-index: -100;
+}
+
+#main-arrow {
+	transform: rotate(90deg);
+	position: absolute;
+	margin-top: 1em;
+	z-index: 2;
+}
+
+.main-picture-container {
+	position: relative;
+	max-width: 100%;
+	max-height: 100%;
+	min-width: 100%;
+}
+
+.earth-picture {
+	width:auto;
+	max-width: 100%;
+	max-height:21rem;
+	align-self: center;
+}
+
+.earth-picture-card {
+	background-color: white;
+	width:auto;
+	max-width: 100%;
+	height:auto;
+	max-height: 20rem;
+	box-sizing: border-box;
+	box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 2px;
+	margin: 1rem;
+	overflow:hidden;
+}
+.earth-picture-card:hover{
+	opacity:0.5;
+}
+.earth-picture-container {
+	display: flex;
+	align-content: center;
+	align-items: flex-start;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin: -1em 0 0 0;
+}
+
+#footer {
+	background-color: #5d5d5d;
+	min-height: 10rem;
+}
+
+.button {
+	background: #0060a3;
+	border: 3px solid #0060a3;
+	box-sizing: border-box;
+	box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 2px;
+	width: 100%;
+	max-width: 24rem;
+	padding: 0.5rem 1.5rem;
+	color: white;
+	font-weight: bold;
+	font-size: 1.3rem;
+	transition: 0.2s;
+	display: block;
+	user-select: none;
+	cursor: default;
+}
+
+.button-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	margin: 3rem;
+}
+
+.buttonContent {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.button:hover {
+	background: #005093;
+	color: #f2f2f2;
+}
+
+.button:active, button.active {
+	background: #ffffff;
+	color: #0060a3;
+}
+
+.button:disabled {
+	background: #f2f2f2;
+	border: 3px solid transparent;
+	color: #c0c0c0;
+}
+
+.iconLeft {
+	width: 2rem;
+	margin-right: 0.5rem;
+}
+
 #faded {
 	position:   fixed;
 	opacity:    0.6;
