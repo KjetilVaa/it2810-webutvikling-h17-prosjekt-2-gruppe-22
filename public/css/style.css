@@ -18,7 +18,7 @@ body {
 	min-height: 100vh;
 }
 #main {
-	margin-top:4rem;
+	margin-top:4em;
 }
 .top {
 	text-align: center;
@@ -145,20 +145,19 @@ body {
 	box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
 	border-radius: 2px;
 	width:70%;
-	height:80%;
-	margin: auto;
-	position: fixed;
-	top:10%;
+	height:70%;
+	position: absolute;
+	top:15%;
 	right:15%;
 	display:none;
 	flex-wrap: wrap;
+	overflow:hidden;
 
 }
 .overlay-info-container{
-	width:20%;
-	padding:5%;
+	width:28%;
+	padding:1%;
 	height:90%;
-	float:left;
 }
 .overlay-picture-conatiner {
 	width:70%;
@@ -172,7 +171,8 @@ body {
 
 }
 #overlay-picture {
-	width:100%;
+	max-width:100%;
+	max-height:100%;
 }
 #exit-button {
 	right:1rem;
@@ -182,7 +182,30 @@ body {
 	heigh:2rem;
 	width:2rem;
 }
+@media screen and (max-width:1366px) {
+	#overlay-container{
+		width:90%;
+		right:5%;
+	}
+}
+
 @media screen and (max-width:700px) {
+	#overlay-container{
+		flex-wrap: wrap-reverse;
+		padding:0px;
+	}
+	.overlay-info-container{
+		width:90%;
+		padding:5%;
+		height:50%;
+	}
+	.overlay-picture-conatiner {
+		width:100%;
+		height:auto;
+		max-height:50%;
+		align-items: flex-start;
+
+	}
 	.container {
 		padding:0px;
 		padding-top:2rem;
@@ -192,5 +215,8 @@ body {
 	}
 	.earth-picture-card {
 		max-height: none;
+	}
+	.top {
+		margin-top:4rem;
 	}
 }
