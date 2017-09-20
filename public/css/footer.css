@@ -4,8 +4,12 @@
     justify-content: flex-end;
     background-color: #5d5d5d;
     min-height: 10rem;
+    font-family: 'Encode Sans Expanded', sans-serif;
 }
 
+#main-footer-container{
+    display: flex;
+}
 
 #footer-content-container{
     flex-direction: column;
@@ -19,8 +23,8 @@
 }
 
 .footer-link-item{
-    flex-direction: row-reverse;
-    }
+    padding-left: 0.5rem;
+}
 
 #footer-image{
     max-height: 7rem;
