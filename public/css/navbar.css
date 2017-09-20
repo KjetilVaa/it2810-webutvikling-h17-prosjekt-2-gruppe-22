@@ -40,30 +40,34 @@
 	width: 80%;
 }
 
-@media only screen and (max-width: 700px) {
+.navigation-element {
+	padding-left: 2.3rem;
+	padding-right: 2.3rem;
+}
+
+/*Sizes for screens smaller than 768px*/
+@media only screen and (max-width: 768px) {
 	.header {
 		height: 4rem;
 	}
+	#logo {
+		width: 18%;
+	}
 	#logo-img {
-		max-height: 2.9rem;
-		max-width: 2.9rem;
+		max-height: 2rem;
+		max-width: 2rem;
 	}
 	.nav-img {
-		max-height: 2.2rem;
-		max-width: 2.2rem;
-	}
-	.logo {
-		width: 10%;
+		max-height: 1.5rem;
+		max-width: 1.5rem;
 	}
 	.navigation {
-		height: 100%;
-		width: 40%
+		width: 64%;
 	}
-}
-
-.navigation-element {
-	padding-left: 7%;
-	padding-right: 7%;
+	.navigation-element {
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
 }
 
 #logo:hover {
@@ -75,10 +79,7 @@
 }
 
 .active {
-	border-bottom: 4px #294168 solid;
-  /*display:inline-block;
-	border-radius: 100%;
-  line-height:200px;*/
+	border-bottom: 2px #294168 solid;
 }
 
 .active:hover {
