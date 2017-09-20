@@ -146,7 +146,7 @@ body {
 	border-radius: 2px;
 	width:70%;
 	height:70%;
-	position: absolute;
+	position: fixed;
 	top:15%;
 	right:15%;
 	display:none;
