@@ -1,0 +1,32 @@
+#footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: #5d5d5d;
+    min-height: 10rem;
+}
+
+#main-footer-container{
+    display: flex;
+
+}
+
+#footer-image-container{
+    display: flex;
+}
+
+.footer-content-container{
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem;
+}
+
+.footer-link-item{
+    flex-direction: row-reverse;
+}
+
+#footer-image{
+    max-height: 7rem;
+    max-width: 7rem;
+    margin-right: -2rem;
+}
