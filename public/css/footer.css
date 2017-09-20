@@ -6,24 +6,21 @@
     min-height: 10rem;
 }
 
-#main-footer-container{
-    display: flex;
 
-}
-
-#footer-image-container{
-    display: flex;
-}
-
-.footer-content-container{
-    display: flex;
+#footer-content-container{
     flex-direction: column;
+    color: white;
+}
+
+.footer-item-container{
+    display: flex;
+    justify-content: flex-end;
     margin: 0.5rem;
 }
 
 .footer-link-item{
     flex-direction: row-reverse;
-}
+    }
 
 #footer-image{
     max-height: 7rem;
