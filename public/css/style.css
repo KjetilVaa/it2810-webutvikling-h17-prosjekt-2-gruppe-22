@@ -1,17 +1,12 @@
 * {
 	margin: auto 0;
 	line-height: 1.4;
-	font-family: 'Jaldi', sans-serif;
-	font-family: sans-serif;
-	font-weight: bold;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
 body {
 	background :#f0f0f0;
 	font-size: 17px;
 	line-height: 1.4;
-	font-family: 'Jaldi', sans-serif;
-	font-family: sans-serif;
-	font-weight: bold;
 }
 .container {
 	padding: 2rem;
@@ -62,6 +57,7 @@ body {
 }
 .picture-container {
 	display: flex;
+	display: -webkit-flex;
 	align-content: center;
 	align-items: flex-start;
 	justify-content: center;
@@ -94,6 +90,7 @@ body {
 
 .button-container {
 	display: flex;
+	display: -webkit-flex;
 	justify-content: center;
 	align-items: center;
 	text-align: center;
@@ -102,6 +99,7 @@ body {
 
 .buttonContent {
 	display: flex;
+	display: -webkit-flex;
 	align-items: center;
 	justify-content: center;
 }
@@ -128,60 +126,66 @@ body {
 }
 
 #faded {
-	position:   fixed;
-	opacity:    0.6;
-	background: black;
-	width:      100%;
-	height:     100%;
-	z-index:    99;
-	top:        0;
-	left:       0;
-	display:none;
-
-}
-#overlay-container{
-	z-index:    99;
-	background :#f0f0f0;
-	box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
-	border-radius: 2px;
-	width:70%;
-	height:70%;
 	position: fixed;
-	top:15%;
-	right:15%;
+	opacity: 0.6;
+	background: black;
+	width: 100%;
+	height: 100%;
+	z-index: 99;
+	top: 0;
+	left: 0;
 	display:none;
-	flex-wrap: wrap;
-	overflow:hidden;
 
 }
-.overlay-info-container{
-	width:20%;
-	padding:5%;
-	height:90%;
-}
-.overlay-picture-conatiner {
-	width:70%;
-	float:left;
-	background-color: black;
-	overflow:hidden;
-	height:100%;
+
+#overlay {
 	display: flex;
+	display: -webkit-flex;
+	justify-content: center;
 	align-items: center;
-	justify-content: center
+}
+
+#overlay-container {
+	z-index: 99;
+	background: white;
+	color: black;
+	box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 0.1rem;
+	max-width: 65%;
+	max-height: 70%;
+	position: fixed;
+	top: 15%;
+	display: none;
+	overflow: hidden;
 
 }
+
+.overlay-info-container{
+	width: auto;
+	height: auto;
+	padding: 2rem;
+}
+
+.overlay-picture-conatiner {
+	width: auto;
+	height: 92%;
+	float: left;
+}
+
 #overlay-picture {
 	max-width:100%;
 	max-height:100%;
 }
+
 #exit-button {
-	right:1rem;
-	top:1rem;
+	left: 0.3rem;
+	top: 0.3rem;
 	position: absolute;
 	z-index: 100;
 	heigh:2rem;
 	width:2rem;
 }
+
 @media screen and (max-width:1366px) {
 	#overlay-container{
 		width:90%;
@@ -192,26 +196,25 @@ body {
 @media screen and (max-width:700px) {
 	#overlay-container{
 		flex-wrap: wrap-reverse;
-		padding:0px;
+		padding :0px;
 	}
 	.overlay-info-container{
-		width:90%;
-		padding:5%;
-		height:50%;
+		width: auto;
+		padding: 1rem;
+		height: 50%;
 	}
 	.overlay-picture-conatiner {
-		width:100%;
-		height:auto;
-		max-height:50%;
+		width: auto;
+		height: auto;
+		max-height: 50%;
 		align-items: flex-start;
-
 	}
 	.container {
-		padding:0px;
-		padding-top:2rem;
+		padding: 0px;
+		padding-top: 2rem;
 	}
 	.earth-picture {
-		max-height:none;
+		max-height: none;
 	}
 	.earth-picture-card {
 		max-height: none;
