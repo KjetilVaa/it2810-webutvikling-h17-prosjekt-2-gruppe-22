@@ -9,3 +9,8 @@
     background-image: url("/public/media/home_header.jpg");
     overflow:hidden;
 }
+
+#earth_content_container{
+
+    max-height: 30rem;
+}
