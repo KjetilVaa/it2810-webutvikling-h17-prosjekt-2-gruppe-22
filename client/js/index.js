@@ -115,7 +115,7 @@ $(document).ready(() => {
     $('.button').click( () => {callFetchAndRender(event.target.id)})
 
     //Adds listener to exit-overlay button
-    $('#exit-button').click(fullPicture('none', null))
+    $('#exit-button').click( () => {fullPicture('none', null)})
 
     //Renders the first 6 pictures
     callFetchAndRender($(document).find("title").text())
