@@ -65,9 +65,11 @@ body {
 	margin: -1em 0 0 0;
 }
 
-#footer {
-	background-color: #5d5d5d;
-	min-height: 10rem;
+/*Remove link styling*/
+a:hover, a:visited, a:link, a:active
+{
+	text-decoration: none;
+	color: inherit;
 }
 
 .button {
@@ -146,9 +148,8 @@ body {
 }
 
 #overlay-container {
+	background-color: white;
 	z-index: 99;
-	background: white;
-	color: black;
 	box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
 	border-radius: 0.1rem;
 	max-width: 65%;
@@ -159,7 +160,6 @@ body {
 	overflow: hidden;
 
 }
-
 .overlay-info-container{
 	width: auto;
 	height: auto;
@@ -188,15 +188,9 @@ body {
 
 @media screen and (max-width:1366px) {
 	#overlay-container{
-		width:90%;
-		right:5%;
-	}
-}
-
-@media screen and (max-width:700px) {
-	#overlay-container{
 		flex-wrap: wrap-reverse;
 		padding :0px;
+		max-width:95%;
 	}
 	.overlay-info-container{
 		width: auto;
@@ -206,9 +200,13 @@ body {
 	.overlay-picture-conatiner {
 		width: auto;
 		height: auto;
-		max-height: 50%;
+		max-height: 70%;
 		align-items: flex-start;
 	}
+}
+
+@media screen and (max-width:700px) {
+
 	.container {
 		padding: 0px;
 		padding-top: 2rem;
