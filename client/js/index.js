@@ -13,7 +13,9 @@ let city = new APIQueryer(PICTURE_API_BASE, '/r/CityPorn/.json', PICTURE_API_LIM
 let water = new APIQueryer(PICTURE_API_BASE, '/r/seaporn/.json', PICTURE_API_LIMIT)
 let forest = new APIQueryer(PICTURE_API_BASE, '/r/BotanicalPorn/.json',PICTURE_API_LIMIT)
 
-
+/*
+ * Creates a picture element, and creates a new HTML element
+ */
 let renderPictures = (pictures) => {
     pictures.forEach((picture) => {
         let card = new Element({
@@ -41,6 +43,9 @@ let renderPictures = (pictures) => {
     $('.earth-picture-card').click(() => fullPicture("flex", event.target))
 }
 
+/*
+ * Fetches the pictures and checks that they are not for over 18
+ */
 let fetchAndRender = (type) => {
     type.fetchTop().then((data) => {
         let pictures = data.map((p) => {
@@ -106,6 +111,7 @@ let fullPicture =  (type, element) => {
  *Calls fetchAndRender function for a given site.
  */
 let callFetchAndRender = (name) => {
+    //checks what photos to load
     switch(name) {
         case "Forest":
         case "load-forest":
@@ -124,7 +130,11 @@ let callFetchAndRender = (name) => {
             fetchAndRender(mountain)
     }
 }
-
+/*
+* As soon as the document is ready
+* Add listener
+* Load first pictures
+*/
 $(document).ready(() => {
     // Adds listener to "load more pictures" button
     $('.button').click( () => {callFetchAndRender(event.target.id)})
