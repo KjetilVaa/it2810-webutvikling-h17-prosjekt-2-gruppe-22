@@ -24,8 +24,8 @@ let renderPictures = (pictures) => {
     })
 }
 
-let fetchAndRender = () => {
-    earthAPI.fetchTop().then((data) => {
+let fetchAndRender = (type) => {
+    type.fetchTop().then((data) => {
         let pictures = data.map((p) => {
             const d = p.data
             console.log(d)
@@ -54,27 +54,45 @@ function fullPicture (type, element) {
     document.getElementById("overlay-picture").src = element.src
 }
 
-let earth = new APIQueryer(PICTURE_API_BASE, '/r/earthporn/top.json', './static/loading.gif')
-let city = new APIQueryer(PICTURE_API_BASE, '/r/CityPorn/top/.json', './static/loading.gif')
+let mountain = new APIQueryer(PICTURE_API_BASE, '/r/geologyporn/.json', 6)
+let city = new APIQueryer(PICTURE_API_BASE, '/r/CityPorn/.json', 6)
+let water = new APIQueryer(PICTURE_API_BASE, '/r/seaporn/.json', 6)
+let forest = new APIQueryer(PICTURE_API_BASE, '/r/BotanicalPorn/.json',6)
+
+function callFetchAndRender(name) {
+    switch(name) {
+        case "Forest":
+            fetchAndRender(forest)
+            break
+        case "Water":
+            fetchAndRender(water)
+            break
+        case "City":
+            fetchAndRender(city)
+            break
+        case "Mountain":
+            fetchAndRender(mountain)
+    }
+}
 
 $(document).ready(() => {
-
     // Enable bottom button
     $('.button').click( () => {
-        if(event.target.id = 'load-city') {
+        if(event.target.id === 'load-city') {
             fetchAndRender(city)
         }
-        else if(event.target.id = 'load-water'){
+        else if(event.target.id === 'load-water'){
             fetchAndRender(water)
         }
-        else if(event.target.id = 'load-forest'){
+        else if(event.target.id === 'load-forest'){
             fetchAndRender(forest)
         }
-        else if(event.target.id = 'load-mountain'){
+        else if(event.target.id === 'load-mountain'){
             fetchAndRender(mountain)
         }
     })
 
-    // Fetch and render first batch of pictures
-    fetchAndRender()
+
 })
+
+callFetchAndRender($(document).find("title").text());
