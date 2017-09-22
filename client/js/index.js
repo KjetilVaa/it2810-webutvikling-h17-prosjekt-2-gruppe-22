@@ -101,7 +101,6 @@ let fullPicture =  (type, element) => {
         $("#resolution").text("Resolution: " + resolution[0])
         $("#overlay-picture").attr("src",pictureElement.src)
     }
-
     //Turning the overlay visible or making it invisible
     $("#faded").css("display", type);
     $("#overlay-container").css("display", type);
@@ -145,5 +144,4 @@ $(document).ready(() => {
     //Renders the first 6 pictures
     callFetchAndRender($(document).find("title").text())
 })
-
 
