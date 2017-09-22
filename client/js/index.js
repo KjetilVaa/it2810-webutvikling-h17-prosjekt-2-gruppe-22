@@ -5,8 +5,6 @@ import APIQueryer from './APIQueryer.js'
 // Define constants
 const PICTURE_API_LIMIT = 6
 const PICTURE_API_BASE = 'https://www.reddit.com'
-const PICTURE_API_URL = '/r/earthporn/top.json'
-const LOADING_GIF_URL = './static/loading.gif'
 
 let renderPictures = (pictures) => {
     pictures.forEach((picture) => {
@@ -56,12 +54,18 @@ function fullPicture (type, element) {
     document.getElementById("overlay-picture").src = element.src
 }
 
-let earthAPI = new APIQueryer(PICTURE_API_BASE, PICTURE_API_URL, PICTURE_API_LIMIT)
+let eart1hAPI = new APIQueryer(PICTURE_API_BASE, '/r/earthporn/top.json', './static/loading.gif')
+let earthAPI = new APIQueryer(PICTURE_API_BASE, '/r/CityPorn/top/.json', './static/loading.gif')
 
 $(document).ready(() => {
 
     // Enable bottom button
-    $('#load-more-pictures').click(fetchAndRender)
+    $('.button').click( () => {
+        console.log($('.button').attr('#load-city'))
+        if($(this).attr('#load-city')) {
+            fetchAndRender
+        }
+    })
 
     // Fetch and render first batch of pictures
     fetchAndRender()
