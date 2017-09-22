@@ -71,11 +71,11 @@
 }
 
 #logo:hover {
-	transform: scale(1.2, 1.2);
+	/*transform: scale(1.2, 1.2);*/
 }
 
 .navigation-element:hover{
-	transform: scale(1.5, 1.5);
+	/*transform: scale(1.5, 1.5);*/
 }
 
 .active {
