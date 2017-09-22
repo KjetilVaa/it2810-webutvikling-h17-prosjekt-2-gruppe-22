@@ -49,6 +49,7 @@ let fetchAndRender = (type) => {
 
 function fullPicture (type, element) {
     document.getElementById("faded").style.display = type
+    document.getElementById("overlay").style.display = type
     document.getElementById("overlay-container").style.display = type
     console.log(element)
     document.getElementById("overlay-picture").src = element.src
