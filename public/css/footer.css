@@ -4,8 +4,7 @@
     justify-content: flex-end;
     background-color: #5d5d5d;
     min-height: 10rem;
-
-
+    overflow: hidden;
 }
 
 #main-footer-container{
@@ -21,7 +20,6 @@
     justify-content: flex-end;
     margin: 0.5rem;
     font-family: 'Encode Sans Expanded', sans-serif;
-
 
 }
 
@@ -39,5 +37,4 @@
 #footer-image{
     max-height: 7rem;
     max-width: 7rem;
-    margin-right: -2rem;
 }
