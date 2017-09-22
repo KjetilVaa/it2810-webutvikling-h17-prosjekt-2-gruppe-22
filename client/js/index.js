@@ -55,26 +55,29 @@ let fetchAndRender = (type) => {
 }
 
 function fullPicture (type, element) {
-    console.log(element.id)
-    var pictureElement;
-    elements.forEach(function(item) {
-        if(item.id == element.id) {
-            pictureElement = item
-        }
-    });
+    if(element !== null) {
+        console.log(element.id)
+        var pictureElement;
+        elements.forEach(function (item) {
+            if (item.id == element.id) {
+                pictureElement = item
+            }
+        });
 
-    var picureDate = new Date(0)
-    var reg = "^[a-zA-Z ]*$"
-    picureDate.setUTCSeconds(parseInt(pictureElement.date))
-    console.log(pictureElement.title)
-    $("#title").text(pictureElement.title)
-    $("#date").text("Date: " + picureDate.getDate() + "." + picureDate.getMonth() + "." +picureDate.getFullYear())
-    $("#author").text(pictureElement.author)
+        var picureDate = new Date(0)
+        var reg = "^[a-zA-Z ]*$"
+        picureDate.setUTCSeconds(parseInt(pictureElement.date))
+        console.log(pictureElement.title)
+        $("#title").text(pictureElement.title)
+        $("#date").text("Date: " + picureDate.getDate() + "." + picureDate.getMonth() + "." + picureDate.getFullYear())
+        $("#author").text(pictureElement.author)
 
+        document.getElementById("overlay-picture").src = pictureElement.src
+    }
     document.getElementById("faded").style.display = type
     document.getElementById("overlay-container").style.display = type
-    document.getElementById("overlay-picture").src = pictureElement.src
 }
+
 
 let mountain = new APIQueryer(PICTURE_API_BASE, '/r/Mountainpics/.json', 6)
 let city = new APIQueryer(PICTURE_API_BASE, '/r/CityPorn/.json', 6)
@@ -100,22 +103,23 @@ function callFetchAndRender(name) {
 $(document).ready(() => {
 
     // Enable bottom button
-    $('.button').click( () => {
-        if(event.target.id === 'load-city') {
+    $('.button').click(() => {
+        if (event.target.id === 'load-city') {
             fetchAndRender(city)
         }
-        else if(event.target.id === 'load-water'){
+        else if (event.target.id === 'load-water') {
             fetchAndRender(water)
         }
-        else if(event.target.id === 'load-forest'){
+        else if (event.target.id === 'load-forest') {
             fetchAndRender(forest)
         }
-        else if(event.target.id === 'load-mountain'){
+        else if (event.target.id === 'load-mountain') {
             fetchAndRender(mountain)
         }
     })
-
-
+    $('#exit-button').click(() => {
+        fullPicture('none', null)
+    })
 })
 
-callFetchAndRender($(document).find("title").text());
+callFetchAndRender($(document).find("title").text())
