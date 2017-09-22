@@ -83,6 +83,7 @@ let fullPicture =  (type, element) => {
         document.getElementById("overlay-picture").src = pictureElement.src
     }
     document.getElementById("faded").style.display = type
+    document.getElementById("overlay").style.display = type
     document.getElementById("overlay-container").style.display = type
 }
 
@@ -120,5 +121,4 @@ $(document).ready(() => {
     //Renders the first 6 pictures
     callFetchAndRender($(document).find("title").text())
 })
-
 
