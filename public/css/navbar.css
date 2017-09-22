@@ -1,87 +1,87 @@
 /* Navbar style */
 
 .header {
-	display: flex;
-	display: -webkit-flex;
-	background-color: white;
-	border-bottom: 2px #294168 solid;
-	height: 6rem;
-	position: fixed;
-	overflow: hidden;
-	width: 100%;
-	z-index: 100;
-	top:0px;
+		display: flex;
+		display: -webkit-flex;
+		background-color: white;
+		border-bottom: 2px #294168 solid;
+		height: 6rem;
+		position: fixed;
+		overflow: hidden;
+		width: 100%;
+		z-index: 100;
+		top:0px;
 }
 
 #logo{
-	display: flex;
-	display: -webkit-flex;
-	justify-content: center;
-	-webkit-flex-justify-content: center;
-	width: 10%;
+		display: flex;
+		display: -webkit-flex;
+		justify-content: center;
+		-webkit-flex-justify-content: center;
+		width: 10%;
 }
 
 #logo-img {
-	max-height: 4rem;
-	max-width: 4rem;
+		max-height: 4rem;
+		max-width: 4rem;
 }
 
 .nav-img {
-	max-height: 3.3rem;
-	max-width: 3.3rem;
+		max-height: 3.3rem;
+		max-width: 3.3rem;
 }
 
 .navigation {
-  display: flex;
-	display: -webkit-flex;
-	justify-content: center;
-	-webkit-flex-justify-content: center;
-	height: 100%;
-	width: 80%;
+	  display: flex;
+		display: -webkit-flex;
+		justify-content: center;
+		-webkit-flex-justify-content: center;
+		height: 100%;
+		width: 80%;
 }
 
 .navigation-element {
-	padding-left: 2.3rem;
-	padding-right: 2.3rem;
+		padding-left: 2.3rem;
+		padding-right: 2.3rem;
 }
 
 /*Sizes for screens smaller than 768px*/
 @media only screen and (max-width: 768px) {
-	.header {
-		height: 4rem;
-	}
-	#logo {
-		width: 18%;
-	}
-	#logo-img {
-		max-height: 2rem;
-		max-width: 2rem;
-	}
-	.nav-img {
-		max-height: 1.5rem;
-		max-width: 1.5rem;
-	}
-	.navigation {
-		width: 64%;
-	}
-	.navigation-element {
-		padding-left: 1rem;
-		padding-right: 1rem;
-	}
+		.header {
+				height: 4rem;
+		}
+		#logo {
+				width: 18%;
+		}
+		#logo-img {
+				max-height: 2rem;
+				max-width: 2rem;
+		}
+		.nav-img {
+				max-height: 1.5rem;
+				max-width: 1.5rem;
+		}
+		.navigation {
+				width: 64%;
+		}
+		.navigation-element {
+				padding-left: 1rem;
+				padding-right: 1rem;
+		}
 }
 
 #logo:hover {
-	transform: scale(1.2, 1.2);
+		transform: scale(1.2, 1.2);
 }
 
 .navigation-element:hover{
-	transform: scale(1.5, 1.5);
+		transform: scale(1.5, 1.5);
 }
 
 .active {
-	border-bottom: 2px #294168 solid;
+		border-bottom: 2px #294168 solid;
 }
 
 .active:hover {
-	transform: scale(1, 1);
+		transform: scale(1, 1);
 }
