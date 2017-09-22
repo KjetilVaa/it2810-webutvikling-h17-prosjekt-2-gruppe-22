@@ -1,6 +1,12 @@
+#main_container{
+
+}
 
 #header_container{
+    margin-top:3.5rem;
     max-height: 100%;
-    max-height: 5rem;
+    max-height: 50%;
     background-image: url("/public/media/home_header.jpg");
+    background-size: auto;
+    overflow:hidden;
 }
