@@ -5,8 +5,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="/public/css/navbar.css">
         <link rel="stylesheet" type="text/css" href="/public/css/style.css">
+        <link rel="stylesheet" type="text/css" href="/public/css/footer.css">
         <link rel="icon" href="./static/tree.ico" type="image/x-icon"/>
         <link rel="shortcut icon" href="/public/media/earth.png" type="image/x-icon"/>
+        <!--Fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Expanded" rel="stylesheet">
     </head>
     <body>
         <div class="header">
@@ -23,5 +26,42 @@
         </div>
         {% block content %}
         {% endblock %}
+
+        <div id="footer">
+
+            <div id="main-footer-container">
+
+                <div id="footer-content-container">
+
+                    <div id="footer-item-container">
+
+                    <nav>
+
+                        <a href="#" class="footer-link-item">About</a>
+                        <a href="#" class="footer-link-item">Contact</a>
+                        <a href="/doc" class="footer-link-item">Documentation</a>
+
+                    </nav>
+
+                    </div>
+
+                    <div id="footer-text-container">
+
+                        Stop stealing shit, this page is Copyrighted &copy;
+                    </div>
+
+                </div>
+
+                <div id="footer-image-container">
+                    <img id="footer-image" src="/public/media/earth_grey.png" alt="earth_grey">
+                </div>
+
+            </div>
+
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="./public/js/earth.js"></script>
+        <script src="./public/js/script.js"></script>
+
     </body>
 </html>
