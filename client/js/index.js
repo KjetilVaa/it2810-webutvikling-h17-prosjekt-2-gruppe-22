@@ -54,16 +54,24 @@ function fullPicture (type, element) {
     document.getElementById("overlay-picture").src = element.src
 }
 
-let eart1hAPI = new APIQueryer(PICTURE_API_BASE, '/r/earthporn/top.json', './static/loading.gif')
-let earthAPI = new APIQueryer(PICTURE_API_BASE, '/r/CityPorn/top/.json', './static/loading.gif')
+let earth = new APIQueryer(PICTURE_API_BASE, '/r/earthporn/top.json', './static/loading.gif')
+let city = new APIQueryer(PICTURE_API_BASE, '/r/CityPorn/top/.json', './static/loading.gif')
 
 $(document).ready(() => {
 
     // Enable bottom button
     $('.button').click( () => {
-        console.log($('.button').attr('#load-city'))
-        if($(this).attr('#load-city')) {
-            fetchAndRender
+        if(event.target.id = 'load-city') {
+            fetchAndRender(city)
+        }
+        else if(event.target.id = 'load-water'){
+            fetchAndRender(water)
+        }
+        else if(event.target.id = 'load-forest'){
+            fetchAndRender(forest)
+        }
+        else if(event.target.id = 'load-mountain'){
+            fetchAndRender(mountain)
         }
     })
 
