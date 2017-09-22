@@ -161,13 +161,14 @@ a:hover, a:visited, a:link, a:active
 	overflow: hidden;
 
 }
+
 .overlay-info-container{
 	width: auto;
 	height: auto;
 	padding: 2rem;
 }
 
-.overlay-picture-conatiner {
+.overlay-picture-container {
 	width: auto;
 	height: 92%;
 	float: left;
@@ -198,7 +199,7 @@ a:hover, a:visited, a:link, a:active
 		padding: 1rem;
 		height: 50%;
 	}
-	.overlay-picture-conatiner {
+	.overlay-picture-container {
 		width: auto;
 		height: auto;
 		max-height: 70%;
