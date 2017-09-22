@@ -140,6 +140,7 @@ a:hover, a:visited, a:link, a:active
 
 }
 
+/* Overlay pictures */
 #overlay {
 	display: flex;
 	display: -webkit-flex;
@@ -220,4 +221,19 @@ a:hover, a:visited, a:link, a:active
 	.top {
 		margin-top:4rem;
 	}
+}
+
+/* Documentation */
+#requirements {
+	background-color: white;
+	padding: 1.5em;
+	box-sizing: border-box;
+	box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 2px;
+	margin:2rem;
+	font-size: 1.1rem;
+}
+
+li {
+	font-size: 1.2rem;
 }
