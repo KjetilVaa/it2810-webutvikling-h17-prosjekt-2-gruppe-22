@@ -65,9 +65,11 @@ body {
 	margin: -1em 0 0 0;
 }
 
-#footer {
-	background-color: #5d5d5d;
-	min-height: 10rem;
+/*Remove link styling*/
+a:hover, a:visited, a:link, a:active
+{
+	text-decoration: none;
+	color: inherit;
 }
 
 .button {
