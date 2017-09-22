@@ -5,11 +5,13 @@
     background-color: #5d5d5d;
     min-height: 10rem;
     overflow: hidden;
+
 }
 
 #main-footer-container{
     display: flex;
 }
+
 
 #footer-content-container{
     flex-direction: column;
@@ -19,22 +21,29 @@
     display: flex;
     justify-content: flex-end;
     margin: 0.5rem;
-    font-family: 'Encode Sans Expanded', sans-serif;
 
 }
 
 .footer-link-item{
+    margin-right: 0.5rem;
     padding-left: 0.5rem;
-    font-family: 'Encode Sans Expanded', sans-serif;
     color: white;
+    font-family: 'Encode Sans Expanded', sans-serif;
+
 
 }
 
 #footer-text-container{
+    display: flex;
+    justify-content: center;
     color: #9d9d9d;
+    font-family: 'Encode Sans Expanded', sans-serif;
+    font-size: 0.81rem;
+
 }
 
 #footer-image{
     max-height: 7rem;
     max-width: 7rem;
 }
+
