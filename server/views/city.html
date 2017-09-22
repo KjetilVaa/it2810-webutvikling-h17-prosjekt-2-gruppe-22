@@ -1,19 +1,19 @@
 {% extends "base.html" %}
 {% block title %}City{% endblock %}
 {% block content %}
-
 <div id="faded"></div>
 <div id="overlay">
     <div id="overlay-container">
-        <img id="exit-button" src="./public/images/exit.png" onclick="fullPicture('none')">
+        <img id="exit-button" src="./public/images/exit.png">
         <div class="overlay-info-container">
-            <h3>City At Night</h3>
-            <p>Author: Mike Longham</p>
-            <p>Date: 23.05.2016</p>
-            <p>Size: 2MB</p>
+            <h3 id="title">City At Night</h3>
+            <h5 id="date">testdate</h5>
+            <h5 id="author">author</h5>
+
         </div>
-        <div class="overlay-picture-container">
-            <img id="overlay-picture" src="./public/images/test.jpg" alt="City at night">
+        <div class="overlay-picture-conatiner">
+            <img id="overlay-picture" alt="City photo">
+
         </div>
     </div>
 </div>
