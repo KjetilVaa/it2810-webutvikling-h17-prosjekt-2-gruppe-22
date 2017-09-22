@@ -62,9 +62,12 @@ let fetchAndRender = (type) => {
     })
 }
 
+/*
+ * Makes the overlay visible
+ * Sets in the correct picture and info
+ */
 let fullPicture =  (type, element) => {
     if(element !== null) {
-        console.log(element.id)
         var pictureElement;
         elements.forEach(function (item) {
             if (item.id == element.id) {
@@ -72,23 +75,35 @@ let fullPicture =  (type, element) => {
             }
         });
 
-        var picureDate = new Date(0)
-        var reg = "^[a-zA-Z ]*$"
-        picureDate.setUTCSeconds(parseInt(pictureElement.date))
-        console.log(pictureElement.title)
-        $("#title").text(pictureElement.title)
-        $("#date").text("Date: " + picureDate.getDate() + "." + picureDate.getMonth() + "." + picureDate.getFullYear())
-        $("#author").text(pictureElement.author)
+        //Splits the title into title and resolution and check that it has a valid value
+        var resolution = pictureElement.title.match(/[\[][[0-9xX× ]+[[0-9xX× ]+[\]]/g)
+        var title = pictureElement.title.match(/[a-zA-ZæøåÆØÅ. ]+/g)
+        if(resolution === null) {
+            resolution = ["Unknown"]
+        }
+        if (title === null){
+            title = ["Unknown"]
+        }
 
-        document.getElementById("overlay-picture").src = pictureElement.src
+        //Converts the date from UTC to day, month, year
+        var picureDate = new Date(0)
+        picureDate.setUTCSeconds(parseInt(pictureElement.date))
+
+        //Change the text in the html document
+        $("#title").text(title[0])
+        $("#date").text("Date: " + picureDate.getDate() + "." + (picureDate.getMonth()+1) + "." + picureDate.getFullYear())
+        $("#author").text("Author: " + pictureElement.author)
+        $("#resolution").text("Resolution: " + resolution[0])
+        $("#overlay-picture").attr("src",pictureElement.src)
     }
-    document.getElementById("faded").style.display = type
-    document.getElementById("overlay-container").style.display = type
+
+    //Turning the overlay visible or making it invisible
+    $("#faded").css("display", type);
+    $("#overlay-container").css("display", type);
 }
 
 /*
  *Calls fetchAndRender function for a given site.
- * parm String
  */
 let callFetchAndRender = (name) => {
     switch(name) {
