@@ -3,16 +3,18 @@
 {% block content %}
 
 <div id="faded"></div>
-<div id="overlay-container">
-    <img id="exit-button" src="./public/images/exit.png" onclick="fullPicture('none')">
-    <div class="overlay-info-container">
-        <h3>City At Night</h3>
-        <p>Author: Mike Longham</p>
-        <p>Date: 23.05.2016</p>
-        <p>Size: 2MB</p>
-    </div>
-    <div class="overlay-picture-conatiner">
-        <img id="overlay-picture" src="./public/images/test.jpg" alt="City at night">
+<div id="overlay">
+    <div id="overlay-container">
+        <img id="exit-button" src="./public/images/exit.png" onclick="fullPicture('none')">
+        <div class="overlay-info-container">
+            <h3>City At Night</h3>
+            <p>Author: Mike Longham</p>
+            <p>Date: 23.05.2016</p>
+            <p>Size: 2MB</p>
+        </div>
+        <div class="overlay-picture-conatiner">
+            <img id="overlay-picture" src="./public/images/test.jpg" alt="City at night">
+        </div>
     </div>
 </div>
 <div class="container">
@@ -24,9 +26,6 @@
         <button id="load-water" class="button">Load More</button>
     </div>
 </div>
-<div id="footer">
-</div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="./public/js/earth.js"></script>
-<script src="./public/js/script.js"></script>
+
 {% endblock %}
+
