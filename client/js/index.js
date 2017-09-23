@@ -82,13 +82,19 @@ let fullPicture =  (type, element) => {
 
         //Splits the title into title and resolution and check that it has a valid value
         var resolution = pictureElement.title.match(/[\[][[0-9xX× ]+[[0-9xX× ]+[\]]/g)
-        var title = pictureElement.title.match(/[a-zA-ZæøåÆØÅ. ]+/g)
+        var title = pictureElement.title.match(/[a-zA-ZæøåÆØÅ.' ]+/g)
+
+        //Checks if title and resolution got a value, else unknown
         if(resolution === null) {
             resolution = ["Unknown"]
+        }
+        else {
+            resolution[0] = resolution[0].match(/[^\[\]]+/g)
         }
         if (title === null){
             title = ["Unknown"]
         }
+
 
         //Converts the date from UTC to day, month, year
         var picureDate = new Date(0)
@@ -130,8 +136,8 @@ let callFetchAndRender = (name) => {
     }
 }
 /*
-* As soon as the document is ready
-* Add listener
+* As soon as the document is ready,
+* Add listeners
 * Load first pictures
 */
 $(document).ready(() => {

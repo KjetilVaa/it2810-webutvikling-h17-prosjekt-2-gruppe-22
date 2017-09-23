@@ -1,32 +1,10 @@
 {% extends "base.html" %}
 {% block title %}City{% endblock %}
+
 {% block content %}
-<div id="faded"></div>
-<div id="overlay">
-    <div id="overlay-container">
-        <img id="exit-button" src="./public/images/exit.png">
-        <div class="overlay-info-container">
-            <h3 id="title">City At Night</h3>
-            <h5 id="date">testdate</h5>
-            <h5 id="author">author</h5>
-            <h5 id="resolution">Resolution</h5>
-
-        </div>
-        <div class="overlay-picture-conatiner">
-            <img id="overlay-picture" alt="City photo">
-
-        </div>
-    </div>
-</div>
-<div class="container">
-    <div class="top">
-        <h2 class="top-header">The cities of the world</h2>
-    </div>
-    <div class="picture-container"></div>
-    <div class="button-container">
-        <button id="load-city" class="button">Load More</button>
-    </div>
-</div>
-
+{% include "overlay.html" %}
+{% include "picture.html" %}
+{% import "picture.html" as values %}
+{{ values.id('City' , 'idk') }}
 {% endblock %}
 
