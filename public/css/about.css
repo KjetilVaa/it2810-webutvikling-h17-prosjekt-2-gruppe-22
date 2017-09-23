@@ -1,12 +1,14 @@
+/*Container for about images*/
 .about_img_container{
     display: flex;
     position: relative;
 
 }
+/*Container for pair of image and image text*/
 .about_img_and_text_container{
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
-
 
 }
 
@@ -22,8 +24,6 @@
     border-left: 2px solid #888;
     font-size: 1rem;
     font-family: 'Raleway', sans-serif;
-    transition: 2s ease-out;
-
 
 }
 
@@ -33,4 +33,37 @@
     margin: auto;
     margin-top: 1rem;
     height: 10rem;
+    transition: ease height,0.5s,0s,1s;
+
+}
+/*Scaling for different screen sizes*/
+@media screen and (max-width:1415px) {
+
+    .about_img_text{
+        transition: width 2s;
+        max-width: 15rem;
+        min-width: 8rem;
+        font-size: 0.9rem;
+    }
+
+    .round_img{
+        height: 6rem;
+    }
+
+}
+
+@media screen and (max-width:768px) {
+
+    .about_img_text{
+        transition: width 2s;
+        max-width: 10rem;
+        min-width: 8rem;
+        font-size: 0.6rem;
+    }
+
+    .round_img{
+        height: 4rem;
+    }
+
+
 }
