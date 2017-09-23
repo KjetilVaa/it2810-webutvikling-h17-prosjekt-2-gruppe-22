@@ -13,7 +13,6 @@ class APIQueryer {
     fetchTop() {
         return new Promise((resolve, reject) => {
             const query = this.createQuery()
-            console.log(query)
             fetch(query)
                 .then((res) => { return res.json() })
                 .then(({data}) => {

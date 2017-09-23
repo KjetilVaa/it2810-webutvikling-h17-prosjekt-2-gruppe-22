@@ -1,27 +1,12 @@
-{% extends "base.html" %}
-{% block content %}
-<div id="faded"></div>
-<div id="overlay">
-    <div id="overlay-container">
-        <img id="exit-button" src="./public/images/exit.png" onclick="fullPicture('none')">
-        <div class="overlay-info-container">
-            <h3 id="title">City At Night</h3>
-            <h5 id="date">testdate</h5>
-            <h5 id="author">author</h5>
-
-        </div>
-        <div class="overlay-picture-conatiner">
-            <img id="overlay-picture" src="./public/images/test.jpg" alt="City at night">
-        </div>
-    </div>
-</div>
+{% macro id(button , text) %}
 <div class="container">
     <div class="top">
-        <h2 class="top-header">The cities of the world</h2>
+        <h2 class="top-header">{{ text }}</h2>
     </div>
     <div class="picture-container"></div>
-    <div class="button-container">
-        <button id=""{%block button_id %} load-city {% endblock %}" class="button">Load More</button>
-    </div>
+        <div class="button-container">
+            <button id="{{ button }}" class="button">Load More</button>
+        </div>
 </div>
-{ % endblock %}
+{% endmacro %}
+
