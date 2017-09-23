@@ -1,5 +1,6 @@
 const express = require('express')
 const nunjucks = require('nunjucks')
+const bodyParser = require('body-parser')
 
 const HOST = process.env.P2_HOST || '0.0.0.0'
 const PORT = process.env.P2_PORT || 8000
@@ -18,6 +19,12 @@ const anchors = [
     {img: "/public/media/forest.png", name: "Forest", link: "/forest"},
     {img: "/public/media/city.png", name: "City", link: "/city"}
 ]
+
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: false }))
+
+// parse application/json
+app.use(bodyParser.json())
 
 app.use('/public', express.static('./public'))
 
@@ -45,9 +52,18 @@ app.get('/about', (req, res) => {
 app.get('/contact', (req, res) => {
     res.render('contact.html', {anchors: anchors, active: req.path})
 })
+<<<<<<< HEAD
 app.get('/msg', (req, res) => {
+=======
+app.post('/msg',  function(req, res) {
+    console.log("I made it")
+    console.log(req.body)
+var name = req.body.name,
+    email = req.body.email,
+    text = req.body.text
+>>>>>>> 9061170f9a79e77cb322cfbd7c136e49907cd03b
     res.render('msg.html', {anchors: anchors, active: req.path})
-})
+});
 
 
 let server = app.listen(PORT, HOST, () => console.log('Project server running on: ' + HOST + ':' + PORT))
