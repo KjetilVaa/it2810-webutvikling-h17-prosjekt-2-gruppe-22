@@ -42,6 +42,9 @@ app.get('/doc', (req, res) => {
 app.get('/about', (req, res) => {
     res.render('about.html', {anchors: anchors, active: req.path})
 })
+app.get('/contact', (req, res) => {
+    res.render('contact.html', {anchors: anchors, active: req.path})
+})
 app.('/msg', (req, res) => {
     res.render('msg.html', {anchors: anchors, active: req.path})
 })
