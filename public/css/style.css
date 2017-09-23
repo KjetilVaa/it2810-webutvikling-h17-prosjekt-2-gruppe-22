@@ -8,12 +8,15 @@ body {
 	font-size: 17px;
 	line-height: 1.4;
 }
+
+/*Content container*/
 .content_container{
 	min-height: 30rem;
 	min-width: 10rem;
 
 }
 
+/*Text container that is placed inside content_container*/
 .text_container{
 	padding: 10rem;
 	min-height: 8rem;
@@ -23,11 +26,13 @@ body {
 
 }
 
+/*Adding background color to content_containers*/
 .container_color{
 	background-color: #c0c0c0;
 	min-width: 10rem;
 }
 
+/*Title styling for content_container*/
 .content_container h1{
 	font-family: 'Raleway', sans-serif;
 	font-size: 2rem;
