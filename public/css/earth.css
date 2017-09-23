@@ -1,8 +1,13 @@
+/*Main container that include all content on earth.html*/
+
+/* Earth, front-page */
 #earth_main_container{
     align-items: center;
 }
-
+/*Header container for header image*/
 #earth_header_container{
+    display: flex;
+    justify-content: center;
     margin-top:3.5rem;
     min-height: 30rem;
     max-height: 30rem;
@@ -11,42 +16,58 @@
     background-position: 50%;
     background-repeat: no-repeat;
     overflow:hidden;
+    min-width: 17rem;
+}
+/*Styling header title*/
+#earth_header_container h2{
+    text-align: center;
+    margin: 12rem;
+    color: white;
+    font-family: 'Old Standard TT', serif;
+    font-size: 5vw;
+    font-weight: normal;
+    font-style: italic;
+    text-shadow: 2px 3px 4px #333333;
+
 }
 
+/*Keyword subtext styling*/
+.earth_keyword_subtext{
+    font-family: 'Cantata One', serif;
+    font-size: 0.8rem;
+    color: #888888;
+    font-style: italic;
+    font-weight: normal;
+    margin-top: -0.5rem;
+}
+/*Moving keyword for ignoring period*/
+.earth_keyword_text{
+    margin-left: 0.7rem;
+}
+/*Centering header image*/
 #earth_header_container img {
     max-width: 100%;
     height: auto;
 }
-
-#earth_header_container div {
-    min-width: 0;
+/*Container for ALL keyword and keyword subtext*/
+#earth_keyword_container{
+    display: flex;
+    flex-direction: column;
 }
 
-.content_container{
-    min-height: 30rem;
-}
-
-.text_container{
-    padding: 10rem;
-    min-height: 8rem;
-    font-family: 'Glegoo', serif;
-    font-size: 1.07rem;
-
-}
-
+/*Container for each pair of keyword and subtext*/
 .earth_keyword_content{
     text-align: center;
     font-weight: normal;
     font-family: 'Cantata One', serif;
     font-size: 3rem;
     color: #333333;
+    max-width: 20rem;
+    margin: auto;
+    min-width: 10rem;
 }
 
-#earth_keyword_container{
-    display: flex;
-    flex-direction: column;
-}
-
+/*Horizontal line for keywords*/
 #earth_keyword_container hr{
     margin-bottom: 1rem;
     margin-top: 1.5rem;
@@ -55,48 +76,41 @@
     color:white;
     height:1px;
     background:black;
-    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 350, from(#9d9d9d), to(#c0c0c0));
+    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 150, from(#9d9d9d), to(#c0c0c0));
 }
 
-.earth_keyword_text{
-    font-family: 'Cantata One', serif;
-    font-size: 0.8rem;
-    color: #888888;
-    font-style: italic;
-    font-weight: normal;
-    margin-top: -0.5rem;
-}
+/*Scaling for different screen sizes*/
+@media screen and (max-width:1415px) {
 
-@media screen and (max-width:700px) {
-
-    .text_container{
-        padding: 3rem;
-        min-height: 3rem;
-        font-family: 'Glegoo', serif;
+    .earth_keyword_content{
+        font-size: 2rem;
     }
+
+    .earth_keyword_subtext{
+        font-size: 0.6rem;
+    }
+
 }
 
+@media screen and (max-width:768px) {
 
-.container_color{
-    background-color: #c0c0c0;
-}
+    .earth_keyword_content{
+        font-size: 1.5rem;
+    }
 
-.content_container h1{
-    font-family: 'Raleway', sans-serif;
-    font-size: 2rem;
-    margin-bottom: -0.3rem;
-    color: #005093;
-}
+    .earth_keyword_subtext{
+        margin-top: -0.2rem;
+        font-size: 0.35rem;
+    }
 
-#earth_header_container h2{
-    text-align: center;
-    margin: 12rem;
-    color: white;
-    font-family: 'Old Standard TT', serif;
-    font-size: 5vw;
-    /*font-size: 5vw;*/
-    font-weight: normal;
-    font-style: italic;
-    text-shadow: 2px 3px 4px #333333;
+    #earth_header_container h2{
+        font-size: 1.5rem;
+        margin: 3.5rem;
+
+    }
+
+    #earth_header_container{
+        min-height: 20rem;
+    }
 
 }
