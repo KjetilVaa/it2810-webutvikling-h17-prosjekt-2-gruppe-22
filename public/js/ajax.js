@@ -5,7 +5,8 @@ $(document).ready(() => {
     $("#submit-button").click( () => {
         let text = $("#msg-text").text()
         let name = $("#msg-name").text()
-        $.get( '/msg',{name, text}, function(data) {
+        let mail = $("#msg-mail").text()
+        $.post( '/msg',{name, text, email}, function(data) {
             $('#contact_form').hide();
             $('#results').html(data);
             $('#results').show();

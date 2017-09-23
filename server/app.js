@@ -45,9 +45,12 @@ app.get('/about', (req, res) => {
 app.get('/contact', (req, res) => {
     res.render('contact.html', {anchors: anchors, active: req.path})
 })
-app.('/msg', (req, res) => {
+app.post('/msg', function(req, res) {
+var name = req.body.name,
+    email = req.body.email,
+    text = req.body.text
     res.render('msg.html', {anchors: anchors, active: req.path})
-})
+});
 
 
 let server = app.listen(PORT, HOST, () => console.log('Project server running on: ' + HOST + ':' + PORT))
