@@ -39,5 +39,8 @@ app.get('/city', (req, res) => {
 app.get('/doc', (req, res) => {
     res.render('doc.html', {anchors: anchors, active: req.path})
 })
+app.get('/about', (req, res) => {
+    res.render('about.html', {anchors: anchors, active: req.path})
+})
 
 let server = app.listen(PORT, HOST, () => console.log('Project server running on: ' + HOST + ':' + PORT))
