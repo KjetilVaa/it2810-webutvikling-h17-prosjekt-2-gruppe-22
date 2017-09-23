@@ -257,6 +257,19 @@ li {
 	.picture-container {
 		margin-top:3rem;
 	}
+	.text_container{
+		margin-top: 5rem;
+		padding: 6rem;
+		font-size: 0.9rem;
+	}
+
+	.content_container{
+		min-height: 20rem;
+	}
+
+	.content_container h1{
+		font-size: 1.5rem;
+	}
 
 }
 
@@ -285,28 +298,6 @@ li {
 	.picture-container {
 		margin-top:2rem;
 	}
-}
-
-@media screen and (max-width:1415px) {
-
-
-	.text_container{
-		margin-top: 5rem;
-		padding: 6rem;
-		font-size: 0.9rem;
-	}
-
-	.content_container{
-		min-height: 20rem;
-	}
-
-	.content_container h1{
-		font-size: 1.5rem;
-	}
-}
-
-@media screen and (max-width:768px) {
-
 	.text_container{
 		padding: 4rem;
 		font-size: 0.7rem;
@@ -319,5 +310,4 @@ li {
 	.content_container h1{
 		font-size: 1.2rem;
 	}
-
 }
