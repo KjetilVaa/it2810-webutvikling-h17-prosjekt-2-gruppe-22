@@ -45,7 +45,7 @@ app.get('/about', (req, res) => {
 app.get('/contact', (req, res) => {
     res.render('contact.html', {anchors: anchors, active: req.path})
 })
-app.('/msg', (req, res) => {
+app.get('/msg', (req, res) => {
     res.render('msg.html', {anchors: anchors, active: req.path})
 })
 

@@ -314,5 +314,6 @@ li {
 
 	.content_container h1{
 		font-size: 1.2rem;
+		margin-bottom: 0.15rem;
 	}
 }

@@ -1,6 +1,76 @@
-#contact_main_container{
+.text_container{
+    display: flex;
+    flex-direction: column;
+}
 
+.text_container div{
+    justify-content: center;
 }
 
 #contact_form{
+    flex-direction: column;
+    margin: auto;
+}
+
+
+/*Style for send button*/
+
+#send_button{
+    padding-top: 0.5rem;
+}
+#contact_form button{
+    color:#f0f0f0;
+    background-color: #5d5d5d;
+    width: 15rem;
+    height:2rem;
+    border: 0;
+    font-family: 'Glegoo', serif;
+}
+
+#contact_title{
+    display: flex;
+    font-weight: normal;
+    font-family: 'Cantata One', serif;
+    font-size: 1.5rem;
+    color: #333333;
+    margin-bottom: 1rem;
+}
+
+/*Style for labels*/
+label{
+    color: #005093;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.5rem;
+
+
+}
+/*Style input text area*/
+input, textarea {
+    font-family: 'Glegoo', serif;
+    font-size: 0.85rem;
+    border: 1px solid #999;
+
+}
+/*Align fields and labels*/
+textarea {
+    vertical-align: top;
+    height: 5rem;
+    resize: both;
+}
+
+/*Style highlighted elements*/
+input:focus, textarea:focus {
+    border-color: #005093;
+}
+
+/*Spacing between forms*/
+form div + div {
+    margin-top: 0.5rem;
+}
+
+/*Center fields*/
+input, textarea {
+    min-width: 15rem;
+    box-sizing: border-box;
+    border: 1px solid #666;
 }
