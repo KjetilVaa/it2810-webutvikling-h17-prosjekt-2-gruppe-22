@@ -1,3 +1,4 @@
+/* Footer */
 #footer {
     display: flex;
     align-items: center;
@@ -46,4 +47,3 @@
     max-height: 7rem;
     max-width: 7rem;
 }
-
