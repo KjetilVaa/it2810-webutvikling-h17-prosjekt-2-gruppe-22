@@ -146,7 +146,9 @@ $(document).ready(() => {
 
     //Adds listener to exit-overlay button
     $('#exit-button').click( () => {fullPicture('none', null)})
+    $('#faded').click( () => {fullPicture('none', null)})
 
+    
     //Renders the first 6 pictures
     callFetchAndRender($(document).find("title").text())
 })
