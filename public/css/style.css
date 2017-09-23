@@ -1,12 +1,13 @@
 * {
-	margin: auto 0;
-	line-height: 1.4;
-	font-family: "Trebuchet MS", Helvetica, sans-serif;
+		margin: auto 0;
+		line-height: 1.4;
+		font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
+
 body {
-	background :#f0f0f0;
-	font-size: 17px;
-	line-height: 1.4;
+		background :#f0f0f0;
+		font-size: 17px;
+		line-height: 1.4;
 }
 .content_container{
 	min-height: 30rem;
@@ -36,111 +37,114 @@ body {
 }
 
 .container {
-	padding: 2rem;
-	min-height: 100vh;
+		padding: 2rem;
+		min-height: 100vh;
 }
+
 #main {
-	margin-top:4em;
+		margin-top:4em;
 }
+
 .top {
-	text-align: center;
-	background-color: white;
-	color: #5d5d5d;
-	padding: 1.5em;
-	box-sizing: border-box;
-	box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
-	border-radius: 2px;
-	margin:2rem;
-	margin-top:6rem;
+		text-align: center;
+		background-color: white;
+		color: #5d5d5d;
+		padding: 1.5em;
+		box-sizing: border-box;
+		box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
+		border-radius: 2px;
+		margin:2rem;
+		margin-top:6rem;
 }
+
 .main-picture-container {
-	position: relative;
-	max-width: 100%;
-	max-height: 100%;
-	min-width: 100%;
+		position: relative;
+		max-width: 100%;
+		max-height: 100%;
+		min-width: 100%;
 }
 
 .earth-picture {
-	width:auto;
-	max-width: 100%;
-	max-height:21rem;
-	align-self: center;
+		width:auto;
+		max-width: 100%;
+		max-height:21rem;
+		align-self: center;
 }
 
 .earth-picture-card {
-	background-color: white;
-	width:auto;
-	max-width: 100%;
-	height:auto;
-	max-height: 20rem;
-	box-sizing: border-box;
-	box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
-	border-radius: 2px;
-	margin: 1rem;
-	overflow:hidden;
+		background-color: white;
+		width:auto;
+		max-width: 100%;
+		height:auto;
+		max-height: 20rem;
+		box-sizing: border-box;
+		box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
+		border-radius: 2px;
+		margin: 1rem;
+		overflow:hidden;
 }
 .earth-picture-card:hover{
-	opacity:0.5;
+		opacity:0.5;
 }
 .picture-container {
-	display: flex;
-	display: -webkit-flex;
-	align-content: center;
-	align-items: flex-start;
-	justify-content: center;
-	flex-wrap: wrap;
-	margin: -1em 0 0 0;
+		display: flex;
+		display: -webkit-flex;
+		align-content: center;
+		align-items: flex-start;
+		justify-content: center;
+		flex-wrap: wrap;
+		margin: -1em 0 0 0;
 }
 
 /*Remove link styling*/
 a:hover, a:visited, a:link, a:active
 {
-	text-decoration: none;
-	color: inherit;
+		text-decoration: none;
+		color: inherit;
 }
 
 .button {
-	background: #0060a3;
-	border: 3px solid #0060a3;
-	box-sizing: border-box;
-	box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
-	border-radius: 2px;
-	width: 100%;
-	max-width: 24rem;
-	padding: 0.5rem 1.5rem;
-	color: white;
-	font-weight: bold;
-	font-size: 1.3rem;
-	transition: 0.2s;
-	display: block;
-	user-select: none;
-	cursor: default;
+		background: #0060a3;
+		border: 3px solid #0060a3;
+		box-sizing: border-box;
+		box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
+		border-radius: 2px;
+		width: 100%;
+		max-width: 24rem;
+		padding: 0.5rem 1.5rem;
+		color: white;
+		font-weight: bold;
+		font-size: 1.3rem;
+		transition: 0.2s;
+		display: block;
+		user-select: none;
+		cursor: default;
 }
 
 .button-container {
-	display: flex;
-	display: -webkit-flex;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-	margin: 3rem;
+		display: flex;
+		display: -webkit-flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		margin: 3rem;
 }
 
 .buttonContent {
-	display: flex;
-	display: -webkit-flex;
-	align-items: center;
-	justify-content: center;
+		display: flex;
+		display: -webkit-flex;
+		align-items: center;
+		justify-content: center;
 }
 
 .button:hover {
-	background: #005093;
-	color: #f2f2f2;
+		background: #005093;
+		color: #f2f2f2;
 }
 
 .button:active, button.active {
-	background: #ffffff;
-	color: #0060a3;
+		background: #ffffff;
+		color: #0060a3;
 }
 
 .button:disabled {
