@@ -1,30 +1,10 @@
 {% extends "base.html" %}
+
 {% block title %}Mountain{% endblock %}
+
 {% block content %}
-
-<div id="faded"></div>
-<div id="overlay">
-    <div id="overlay-container">
-        <img id="exit-button" src="./public/images/exit.png" onclick="fullPicture('none')">
-        <div class="overlay-info-container">
-            <h3>City At Night</h3>
-            <p>Author: Mike Longham</p>
-            <p>Date: 23.05.2016</p>
-            <p>Size: 2MB</p>
-        </div>
-        <div class="overlay-picture-conatiner">
-            <img id="overlay-picture" src="./public/images/test.jpg" alt="City at night">
-        </div>
-    </div>
-</div>
-<div class="container">
-    <div class="top">
-        <h2 class="top-header">On the top of the world</h2>
-    </div>
-    <div class="picture-container"></div>
-    <div class="button-container">
-        <button id="load-mountain" class="button">Load More</button>
-    </div>
-</div>
-
+{% include "overlay.html" %}
+{% include "picture.html" %}
+{% import "picture.html" as values %}
+{{ values.id('Mountain' , 'Top of the world') }}
 {% endblock %}

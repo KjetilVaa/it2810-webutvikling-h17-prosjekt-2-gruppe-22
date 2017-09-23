@@ -43,4 +43,5 @@ app.get('/about', (req, res) => {
     res.render('about.html', {anchors: anchors, active: req.path})
 })
 
+
 let server = app.listen(PORT, HOST, () => console.log('Project server running on: ' + HOST + ':' + PORT))
