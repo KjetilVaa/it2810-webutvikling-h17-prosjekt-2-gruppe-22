@@ -52,16 +52,13 @@ app.get('/about', (req, res) => {
 app.get('/contact', (req, res) => {
     res.render('contact.html', {anchors: anchors, active: req.path})
 })
-<<<<<<< HEAD
-app.get('/msg', (req, res) => {
-=======
+
 app.post('/msg',  function(req, res) {
     console.log("I made it")
     console.log(req.body)
-var name = req.body.name,
+    var name = req.body.name,
     email = req.body.email,
     text = req.body.text
->>>>>>> 9061170f9a79e77cb322cfbd7c136e49907cd03b
     res.render('msg.html', {anchors: anchors, active: req.path})
 });
 
