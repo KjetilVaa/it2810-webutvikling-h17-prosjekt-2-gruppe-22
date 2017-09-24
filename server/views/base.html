@@ -22,21 +22,24 @@
 
     </head>
     <body>
-        <div class="header">
-            <a id="logo" href="/">
-                <img id="logo-img" src="/public/media/earth.png" alt="Earth">
-            </a>
-            <div class ="navigation">
-                {% for anchor in anchors %}
-                <a class="navigation-element" href="{{anchor.link}}">
-                    <img class="nav-img navigation-text {% if active === anchor.link %}active{% endif %}" src="{{anchor.img}}" alt="{{anchor.name}}">
+        <div class="wrapper">
+            <div class="header">
+                <a id="logo" href="/">
+                    <img id="logo-img" src="/public/media/earth.png" alt="Earth"/>
                 </a>
-                {% endfor %}
+                <div class ="navigation">
+                    {% for anchor in anchors %}
+                    <a id="{{anchor.button}}" class="navigation-element" href="{{anchor.link}}">
+                        <img class="nav-img navigation-text {% if active === anchor.link %}active{% endif %}" src="{{anchor.img}}"></img>
+                    </a>
+                    {% endfor %}
+                </div>
             </div>
-        </div>
 
-        {% block content %}
-        {% endblock %}
+            {% block content %}
+            {% endblock %}
+        </div>
+        <div id="push"></div>
 
         <div id="footer">
 
