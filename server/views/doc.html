@@ -8,7 +8,17 @@
         <div class="text_container_doc">
             <h1 id="doc_header">Hvordan har vi løst kravene?</h1>
             <label>Node.js og Express som webserver:</label>
-            <p>Vi har brukt node.js og express som webserver...</p>
+            <p>
+                Vi bruker node.js sammen med express rammeverket.
+                Vi har laget en hovedfil(app.js), som håndterer forespørsler fra klientene.
+                I toppen av filen definerer vi variabler for express,  nunjucks og bodyparser.
+                Express brukes til å håndtere forespørsler. Nunjucks brukes til å rendere HTML filene, og bodyParser som brukes til å lese dataen da klienten poster.
+                Deretter definerer vi variabler for host og port, hvor vi sier at begge enten skal være miljøvariabelen p2 eller det som står spesifisert. Videre konfigurerer vi Nunjucks.
+                Vi setter også opp anchors som er linkene i navigasjonsbaren.  Deretter setter vi opp bodyparser og gjør alle filene i public tilgjengelige med express static.
+                Alle linjene som starter med app er ulike forespørsel håndterere.
+                Her har vi brukt både POST og get. POST brukes for å mota informasjon fra «contact» siden.
+                Meldingen blir deretter skrevet til konsoll. Til slutt settes serveren opp, med port og host som parameter.
+            </p>
             <label>Prosjektet kan finnes på:</label>
             <p>http://it2810-22.idi.ntnu.no:8082</p> eller <p>https://webdev.stokkers.no</p>
             <label>CSS Flexible Box Layout Module:</label>
@@ -31,19 +41,10 @@
             <p>Vi bruker prosent og rem til å sette størrelser, tillegg bruker vi CSS @meida for å sette forskjellige størrelser for forskjellige skjerm størrelser. Dermed fungerer nettsiden like bra på mobil som på pc.</p>
             <label>Arbeidsinnsatsnotat:</label>
             <p>Vedlegg med arbeidstimer og oppgaver legges ved på Blackboard.</p>
-        </div>
-        <div class="text_container_doc">
-            <label>Prosjektets Express 'script'; app.js</label>
+            <label>Testing:</label>
             <p>
-                Vi bruker node.js sammen med express rammeverket. 
-                Vi har laget en hovedfil(app.js), som håndterer forespørsler fra klientene. 
-                I toppen av filen definerer vi variabler for express,  nunjucks og bodyparser. 
-                Express brukes til å håndtere forespørsler. Nunjucks brukes til å rendere HTML filene, og bodyParser som brukes til å lese dataen da klienten poster. 
-                Deretter definerer vi variabler for host og port, hvor vi sier at begge enten skal være miljøvariabelen p2 eller det som står spesifisert. Videre konfigurerer vi Nunjucks. 
-                Vi setter også opp anchors som er linkene i navigasjonsbaren.  Deretter setter vi opp bodyparser og gjør alle filene i public tilgjengelige med express static. 
-                Alle linjene som starter med app er ulike forespørsel håndterere. 
-                Her har vi brukt både POST og get. POST brukes for å mota informasjon fra «contact» siden. 
-                Meldingen blir deretter skrevet til konsoll. Til slutt settes serveren opp, med port og host som parameter.
+                Siden er testet i Chrome, Opera og Safari.
+                Siden er validert med W3C markup validation service.
             </p>
         </div>
         <div class="code-container-doc">
