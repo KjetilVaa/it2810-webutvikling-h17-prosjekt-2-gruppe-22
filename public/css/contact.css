@@ -13,17 +13,16 @@
 }
 
 /*Style for send button*/
-
 #send_button{
     padding-top: 0.5rem;
 }
+
 #contact_form button{
     color:#f0f0f0;
     background-color: #5d5d5d;
     width: 15rem;
     height:2rem;
     border: 0;
-    font-family: 'Glegoo', serif;
 }
 
 #contact_title{
@@ -40,9 +39,8 @@ label{
     color: #005093;
     font-family: 'Raleway', sans-serif;
     font-size: 1.5rem;
-
-
 }
+
 /*Style input text area*/
 input, textarea {
     font-family: 'Glegoo', serif;
@@ -50,6 +48,7 @@ input, textarea {
     border: 1px solid #999;
 
 }
+
 /*Align fields and labels*/
 textarea {
     vertical-align: top;

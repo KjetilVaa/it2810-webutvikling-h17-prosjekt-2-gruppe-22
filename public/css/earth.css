@@ -18,12 +18,13 @@
     overflow:hidden;
     min-width: 17rem;
 }
+
 /*Styling header title*/
 #earth_header_container h2{
     text-align: center;
     margin: 12rem;
     color: white;
-    font-family: 'Old Standard TT', serif;
+    /*font-family: 'Old Standard TT', serif;*/
     font-size: 5vw;
     font-weight: normal;
     font-style: italic;
@@ -40,15 +41,18 @@
     font-weight: normal;
     margin-top: -0.5rem;
 }
+
 /*Moving keyword for ignoring period*/
 .earth_keyword_text{
     margin-left: 0.7rem;
 }
+
 /*Centering header image*/
 #earth_header_container img {
     max-width: 100%;
     height: auto;
 }
+
 /*Container for ALL keyword and keyword subtext*/
 #earth_keyword_container{
     display: flex;
