@@ -3,13 +3,14 @@
 		line-height: 1.4;
 		font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
-
+html {
+	min-height: 100%;
+}
 body {
 		background :#f0f0f0;
 		font-size: 17px;
 		line-height: 1.4;
 }
-
 /*Content container*/
 .content_container{
 	min-height: 30rem;
@@ -91,6 +92,7 @@ body {
 .earth-picture-card:hover{
 		opacity:0.5;
 }
+
 .picture-container {
 
 
@@ -164,6 +166,12 @@ a:hover, a:visited, a:link, a:active
 .iconLeft {
 	width: 2rem;
 	margin-right: 0.5rem;
+}
+.header-text {
+	font-family: 'Old Standard TT', serif;
+}
+#thank-you  {
+	text-align: center;
 }
 
 #faded {

@@ -54,11 +54,10 @@ app.get('/contact', (req, res) => {
 })
 
 app.post('/msg',  function(req, res) {
-    console.log("I made it")
-    console.log(req.body)
-    var name = req.body.name,
-    email = req.body.email,
-    text = req.body.text
+    var name = req.body.name
+    var email = req.body.email
+    var text = req.body.text
+    console.log("New Message from:",name,"\nEmail:",email,".\nMessage:", text,"\n------------")
     res.render('msg.html', {anchors: anchors, active: req.path})
 });
 

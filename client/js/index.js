@@ -150,21 +150,21 @@ $(document).ready(() => {
     $('#exit-button').click( () => {fullPicture('none', null)})
     $('#faded').click( () => {fullPicture('none', null)})
 
+
+    //contact page
+    //Add listener to button submit, refresh div using ajax functionality
     $('#results').hide();
     $('#contact_form').show();
 
     $("#submit").click( () => {
             let text = $("#msg-text").val();
             let name = $("#msg-name").val();
-        console.log($("#msg-name").val())
             let email = $("#msg-mail").val();
-            $.post( '/msg',{name: name,text: text,email: email}, function(data) {
-                console.log(data)
-                $('#contact_form').hide();
-                $('#result').show();
-                $('#result').html(data);
-
-            })
+            if( text !== "" && email !== "" && name !== "") {
+                $.post( '/msg',{name: name,text: text,email: email}, function(data) {
+                    $('.text_container').html(data);
+                })
+            }
         }
     )
 
