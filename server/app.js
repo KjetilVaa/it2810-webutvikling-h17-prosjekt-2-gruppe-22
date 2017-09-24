@@ -53,17 +53,11 @@ app.get('/contact', (req, res) => {
     res.render('contact.html', {anchors: anchors, active: req.path})
 })
 
-app.post('/msg',  function(req, res) {
-    var name = req.body.name
-    var email = req.body.email
-    var text = req.body.text
-    console.log("New Message from:",name,"\nEmail:",email,".\nMessage:", text,"\n------------")
+app.post('/msg',  (req, res) => {
+    let { name, email, text } = req.body
+    console.log(`New Message from: ${name}\nEmail: ${email}.\nMessage: ${text}\n------------`)
     res.render('msg.html', {anchors: anchors, active: req.path})
-});
+})
 
 
 let server = app.listen(PORT, HOST, () => console.log('Project server running on: ' + HOST + ':' + PORT))
-
-
-
-

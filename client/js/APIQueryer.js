@@ -1,3 +1,5 @@
+import ajaxFetch from './AjaxFetch'
+
 class APIQueryer {
     constructor(base, url, limit) {
         this.base = base,
@@ -13,8 +15,7 @@ class APIQueryer {
     fetchTop() {
         return new Promise((resolve, reject) => {
             const query = this.createQuery()
-            fetch(query)
-                .then((res) => { return res.json() })
+            ajaxFetch(query)
                 .then(({data}) => {
                     const after = data.after
                     this.updatePrevious(after)

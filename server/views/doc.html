@@ -1,4 +1,7 @@
 {% extends "base.html" %}
+
+{% block title %}Documentation{% endblock %}
+
 {% block content %}
 <div id="doc_container">
     <div class="content_container_doc content_container">
@@ -7,7 +10,7 @@
             <label>Node.js og Express som webserver:</label>
             <p>Vi har brukt node.js og express som webserver...</p>
             <label>Prosjektet kan finnes på:</label>
-            <p>http://it2810-22.idi.ntnu.no:8082</p>
+            <p>http://it2810-22.idi.ntnu.no:8082</p> eller <p>https://webdev.stokkers.no</p>
             <label>CSS Flexible Box Layout Module:</label>
             <p>Vi har brukt Flexbox i alle delene av siden, navigasjonsbaren, «footeren» og hoveddelen.</p>
             <p>I navigasjonsbaren brukes Flexbox til å midtstille elementer, i tillegg sørger Flexbox for at elementene holder riktig avstand til hverandre.</p>
@@ -29,23 +32,40 @@
             <label>Arbeidsinnsatsnotat:</label>
             <p>Vedlegg med arbeidstimer og oppgaver legges ved på Blackboard.</p>
         </div>
+        <div class="text_container_doc">
+            <label>Prosjektets Express 'script'; app.js</label>
+            <p>
+                Vi bruker node.js sammen med express rammeverket. 
+                Vi har laget en hovedfil(app.js), som håndterer forespørsler fra klientene. 
+                I toppen av filen definerer vi variabler for express,  nunjucks og bodyparser. 
+                Express brukes til å håndtere forespørsler. Nunjucks brukes til å rendere HTML filene, og bodyParser som brukes til å lese dataen da klienten poster. 
+                Deretter definerer vi variabler for host og port, hvor vi sier at begge enten skal være miljøvariabelen p2 eller det som står spesifisert. Videre konfigurerer vi Nunjucks. 
+                Vi setter også opp anchors som er linkene i navigasjonsbaren.  Deretter setter vi opp bodyparser og gjør alle filene i public tilgjengelige med express static. 
+                Alle linjene som starter med app er ulike forespørsel håndterere. 
+                Her har vi brukt både POST og get. POST brukes for å mota informasjon fra «contact» siden. 
+                Meldingen blir deretter skrevet til konsoll. Til slutt settes serveren opp, med port og host som parameter.
+            </p>
+        </div>
         <div class="code-container-doc">
+            <div class="text_container_doc">
+                <label>app.js</label>
+            </div>
             <blockquote><pre><code>
             const express = require('express')
             const nunjucks = require('nunjucks')
             const bodyParser = require('body-parser')
-
+            
             const HOST = process.env.P2_HOST || '0.0.0.0'
             const PORT = process.env.P2_PORT || 8000
-
+            
             let app = express()
-
+            
             nunjucks.configure('server/views', {
                 autoescape: true,
                 express: app,
                 watch: true
             })
-
+            
             //Defines links in navbar
             const anchors = [
                 {img: "/public/media/water.png", name: "Water", link: "/water"},
@@ -53,13 +73,13 @@
                 {img: "/public/media/forest.png", name: "Forest", link: "/forest"},
                 {img: "/public/media/city.png", name: "City", link: "/city"}
             ]
-
+            
             //Used to get data from post
             app.use(bodyParser.urlencoded({ extended: false }))
-
+            
             //Makes the public folder public
             app.use('/public', express.static('./public'))
-
+            
             //Sets up redirects
             app.get('/', (req, res) => {
                 res.render('earth.html', {anchors: anchors, active: req.path})
@@ -85,20 +105,22 @@
             app.get('/contact', (req, res) => {
                 res.render('contact.html', {anchors: anchors, active: req.path})
             })
-
-            app.post('/msg',  function(req, res) {
-                var name = req.body.name
-                var email = req.body.email
-                var text = req.body.text
-                console.log("New Message from:",name,"\nEmail:",email,".\nMessage:", text,"\n------------")
+            
+            app.post('/msg',  (req, res) => {
+                let { name, email, text } = req.body
+                console.log(`New Message from: ${name}\nEmail: ${email}.\nMessage: ${text}\n------------`)
                 res.render('msg.html', {anchors: anchors, active: req.path})
-            });
-
-
+            })
+            
+            
             let server = app.listen(PORT, HOST, () => console.log('Project server running on: ' + HOST + ':' + PORT))
+            
             </blockquote></pre></code>
         </div>
         <div class="code-container-doc">
+            <div class="text_container_doc">
+                <label>jQuery</label>
+            </div>
             <blockquote><pre><code>
                 //contact page
                 //Add listener to button submit, refresh div using ajax functionality
@@ -113,6 +135,21 @@
                         }
                     }
                 )
+
+                
+                // Ajax for å hente bilder fra API.
+                import $ from 'jquery'
+                
+                export default (url) => {
+                    return new Promise((resolve, reject) => {
+                        $.ajax({url: url, success: (result) => {
+                            console.log(result)
+                            resolve(result)
+                        }, error: ({error}) => {
+                            reject(error)
+                        }})
+                    })
+                }
             </blockquote></pre></code>
         </div>
     </div>
