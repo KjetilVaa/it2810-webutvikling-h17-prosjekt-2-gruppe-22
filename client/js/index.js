@@ -2,7 +2,6 @@ import $ from 'jquery'
 import Element from './Element.js'
 import APIQueryer from './APIQueryer.js'
 
-
 var elements = [];
 
 // Define constants
@@ -80,7 +79,7 @@ let fullPicture =  (type, element) => {
             if (item.id == element.id) {
                 pictureElement = item
             }
-        });
+        })
 
         //Splits the title into title and resolution and check that it has a valid value
         var resolution = pictureElement.title.match(/[\[][[0-9xX× ]+[[0-9xX× ]+[\]]/g)
@@ -89,15 +88,14 @@ let fullPicture =  (type, element) => {
         //Checks if title and resolution got a value, else unknown
         if(resolution === null) {
             resolution = ["Unknown"]
-        }
-        else {
+        } else {
             resolution[0] = resolution[0].match(/[^\[\]]+/g)
         }
-        if (title === null){
+
+        if (title === null) {
             title = ["Unknown"]
-        }
-        else if(title[0] === "OC" && title.length > 0) {
-            title[0] = title[1];
+        } else if(title[0] === "OC" && title.length > 0) {
+            title[0] = title[1]
         }
 
 
@@ -157,11 +155,11 @@ $(document).ready(() => {
     //contact page
     //Add listener to button submit, refresh div using ajax functionality
     $("#submit").click( () => {
-            let text = $("#msg-text").val();
-            let name = $("#msg-name").val();
-            let email = $("#msg-mail").val();
+            let text = $("#msg-text").val()
+            let name = $("#msg-name").val()
+            let email = $("#msg-mail").val()
             if( text !== "" && email !== "" && name !== "") {
-                $.post( '/msg',{name: name,text: text,email: email},(data) =>{
+                $.post( '/msg', {name: name, text: text, email: email}, (data) =>{
                     $('.text_container').html(data);
                 })
             }
