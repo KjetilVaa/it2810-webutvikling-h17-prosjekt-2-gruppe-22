@@ -96,6 +96,9 @@ let fullPicture =  (type, element) => {
         if (title === null){
             title = ["Unknown"]
         }
+        else if(title[0] === "OC" && title.length > 0) {
+            title[0] = title[1];
+        }
 
 
         //Converts the date from UTC to day, month, year
