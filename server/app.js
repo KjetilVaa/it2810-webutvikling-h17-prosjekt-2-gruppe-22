@@ -13,6 +13,7 @@ nunjucks.configure('server/views', {
     watch: true
 })
 
+//Defines links in navbar
 const anchors = [
     {img: "/public/media/water.png", name: "Water", link: "/water"},
     {img: "/public/media/mountain.png", name: "Mountain", link: "/mountain"},
@@ -20,14 +21,13 @@ const anchors = [
     {img: "/public/media/city.png", name: "City", link: "/city"}
 ]
 
-// parse application/x-www-form-urlencoded
+//Used to get data from post
 app.use(bodyParser.urlencoded({ extended: false }))
 
-// parse application/json
-app.use(bodyParser.json())
-
+//Makes the public folder public
 app.use('/public', express.static('./public'))
 
+//Sets up redirects
 app.get('/', (req, res) => {
     res.render('earth.html', {anchors: anchors, active: req.path})
 })
@@ -63,3 +63,7 @@ app.post('/msg',  function(req, res) {
 
 
 let server = app.listen(PORT, HOST, () => console.log('Project server running on: ' + HOST + ':' + PORT))
+
+
+
+
