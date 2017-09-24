@@ -1,4 +1,19 @@
 /*Main footer container*/
+
+html, body {
+    height: 100%;
+}
+.wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -10rem;
+}
+
+#footer, #push {
+    height: 10rem;
+}
+
 #footer {
     display: flex;
     align-items: center;
@@ -6,11 +21,9 @@
     background-color: #5d5d5d;
     min-height: 10rem;
     overflow: hidden;
-    width:100%;
+    width: 100%;
     transition: ease height,0.5s,0s,1s;
-    bottom:0px;
-
-
+    bottom: 0px;
 }
 
 /*Footer container*/
