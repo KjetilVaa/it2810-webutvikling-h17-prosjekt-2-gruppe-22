@@ -34,7 +34,7 @@ From your terminal/command line, clone the project to your system and run the fo
 cd <project-directory>
 ```
 
-Make sure you have both Nodejs (node) and Node Package Manager (npm)installed on your system.
+Make sure you have both Nodejs (node) and Node Package Manager (npm) installed on your system.
 
 install webpack globally on your system (apply `sudo` if needed)
 ```
