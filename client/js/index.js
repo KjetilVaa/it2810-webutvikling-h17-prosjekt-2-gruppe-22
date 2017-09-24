@@ -1,6 +1,8 @@
 import $ from 'jquery'
 import Element from './Element.js'
 import APIQueryer from './APIQueryer.js'
+
+
 var elements = [];
 
 // Define constants
@@ -147,6 +149,24 @@ $(document).ready(() => {
     //Adds listener to exit-overlay button
     $('#exit-button').click( () => {fullPicture('none', null)})
     $('#faded').click( () => {fullPicture('none', null)})
+
+
+    //contact page
+    //Add listener to button submit, refresh div using ajax functionality
+    $('#results').hide();
+    $('#contact_form').show();
+
+    $("#submit").click( () => {
+            let text = $("#msg-text").val();
+            let name = $("#msg-name").val();
+            let email = $("#msg-mail").val();
+            if( text !== "" && email !== "" && name !== "") {
+                $.post( '/msg',{name: name,text: text,email: email}, function(data) {
+                    $('.text_container').html(data);
+                })
+            }
+        }
+    )
 
     
     //Renders the first 6 pictures

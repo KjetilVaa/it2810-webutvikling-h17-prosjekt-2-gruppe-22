@@ -8,6 +8,7 @@
         <link rel="stylesheet" type="text/css" href="/public/css/footer.css">
         <link rel="stylesheet" type="text/css" href="/public/css/earth.css">
         <link rel="stylesheet" type="text/css" href="/public/css/about.css">
+        <link rel="stylesheet" type="text/css" href="/public/css/contact.css">
         <link rel="icon" href="./static/tree.ico" type="image/x-icon"/>
         <link rel="shortcut icon" href="/public/media/earth.png" type="image/x-icon"/>
         <title>{% block title %}{% endblock %}</title>
@@ -32,6 +33,7 @@
                 {% endfor %}
             </div>
         </div>
+
         {% block content %}
         {% endblock %}
 
@@ -46,7 +48,7 @@
                     <nav>
 
                         <a href="/about" class="footer_link_item">About</a>
-                        <a href="#" class="footer_link_item">Contact</a>
+                        <a href="/contact" class="footer_link_item">Contact</a>
                         <a href="/doc" class="footer_link_item">Documentation</a>
 
                     </nav>

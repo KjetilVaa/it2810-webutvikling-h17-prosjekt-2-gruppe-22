@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div id="contact_main_container">
+    <div class="content_container">
+        <div class="text_container">
+            <div id="contact_title">
+                Contact Us:
+            </div>
+                <form id="contact_form">
+
+                    <div>
+                        <label>First name:*</label>
+                        <br>
+                        <input type="text" id="msg-name" name="user_name" placeholder="Full Name">
+
+                    </div>
+                    <div>
+                        <label>E-mail:*</label>
+                        <br>
+                        <input type="email" id="msg-mail" name="user_mail" placeholder="Your e-mail">
+                    </div>
+                    <div>
+                        <label>Message:*</label>
+                        <br>
+                        <textarea id="msg-text" name="user_message" placeholder="Message"></textarea>
+                    </div>
+                    <div id="send_button">
+                        <button  id="submit" type="button">Send your message</button>
+                    </div>
+                </form>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}
