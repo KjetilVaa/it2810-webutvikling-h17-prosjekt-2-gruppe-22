@@ -7,7 +7,6 @@ This project is set up with a Nodejs backend and a javascript/jQuery based front
 To set up the project we chose to use Docker to eliminate compatability problems between our systems. The project can also be run without Docker.
 
 ## Run the project with Docker
----
 
 To run the project with Docker, install Docker CE and docker-compose for your operating system from [https://docs.docker.com/engine/installation/](docker.com)
 
@@ -29,7 +28,6 @@ docker-compose up
 The project will be available i your web browser at `localhost:8000`
 
 ## Run the project without Docker
----
 
 From your terminal/command line, clone the project to your system and run the following commands:
 ```
@@ -54,7 +52,6 @@ npm start
 The project will be available in your web browser at `localhost:8000`
 
 ## Notes
----
 The project is served at port 8000 for development.
 To change the project port, export the P2_PORT environment variable in your terminal:
 ```
