@@ -76,7 +76,7 @@ let fetchAndRender = (type) => {
 let fullPicture =  (type, element) => {
     if(element !== null) {
         var pictureElement;
-        elements.forEach(function (item) {
+        elements.forEach((item) => {
             if (item.id == element.id) {
                 pictureElement = item
             }
@@ -161,7 +161,7 @@ $(document).ready(() => {
             let name = $("#msg-name").val();
             let email = $("#msg-mail").val();
             if( text !== "" && email !== "" && name !== "") {
-                $.post( '/msg',{name: name,text: text,email: email}, function(data) {
+                $.post( '/msg',{name: name,text: text,email: email},(data) =>{
                     $('.text_container').html(data);
                 })
             }
