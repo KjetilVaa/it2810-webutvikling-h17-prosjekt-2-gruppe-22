@@ -153,9 +153,6 @@ $(document).ready(() => {
 
     //contact page
     //Add listener to button submit, refresh div using ajax functionality
-    $('#results').hide();
-    $('#contact_form').show();
-
     $("#submit").click( () => {
             let text = $("#msg-text").val();
             let name = $("#msg-name").val();
