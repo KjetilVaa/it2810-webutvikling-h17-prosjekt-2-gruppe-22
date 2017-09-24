@@ -1,41 +1,34 @@
 {% extends "base.html" %}
 {% block content %}
-
-<div class="container">
-    <div class="top">
-        <h2 class="top-header">Hvordan har vi løst kravene?</h2>
-    </div>
-    <div id="requirements">
-        <ul>
-            <h3>Node.js og Express som webserver:</h3>
-                <p>Vi har brukt node.js og express som webserver...</p>
-            <h3>Prosjektet kan finnes på:</h3>
-                <p>http://it2810-22.idi.ntnu.no:8082</p>
-            <h3>CSS Flexible Box Layout Module:</h3>
-                <p>Vi har brukt Flexbox i alle delene av siden, navigasjonsbaren, «footeren» og hoveddelen.
-                    I navigasjonsbaren brukes Flexbox til å midtstille elementer, i tillegg sørger Flexbox for at elementene holder riktig avstand til hverandre.
-                    I alle undersidene brukes Flexbox til å posisjonere bildene, dette gjøres med Flexbox-wrap, dermed vil bildene "hoppe" ned, så fort skjermstørrelsen blir for liten, i tillegg er det Flexbox som holder elementene midtstilt.
-                    På landingssiden er elementene plassert med Flexbox
-                </p>
+<div id="doc_container">
+    <div class="content_container">
+        <div class="text_container">
+            <h1 id="doc_header">Hvordan har vi løst kravene?</h1>
+            <label>Node.js og Express som webserver:</label>
+                Vi har brukt node.js og express som webserver...
+            <label>Prosjektet kan finnes på:</label>
+                http://it2810-22.idi.ntnu.no:8082
+            <label>CSS Flexible Box Layout Module:</label>
+                Vi har brukt Flexbox i alle delene av siden, navigasjonsbaren, «footeren» og hoveddelen.
+                I navigasjonsbaren brukes Flexbox til å midtstille elementer, i tillegg sørger Flexbox for at elementene holder riktig avstand til hverandre.
+                I alle undersidene brukes Flexbox til å posisjonere bildene, dette gjøres med Flexbox-wrap, dermed vil bildene "hoppe" ned, så fort skjermstørrelsen blir for liten, i tillegg er det Flexbox som holder elementene midtstilt.
+                På landingssiden er elementene plassert med Flexbox
             <img class = "doc-img" src="./public/media/jqurey.png">
-            <h3>Navigasjonsbaren:</h3>
-                <p>Navigasjonsbaren er implementert fra bunnen av med HTML, CSS, Flexbox og bruk av anchors. Navigasjonsbaren er laget for å være dynamisk å fungerer både på små og store skjermer.</p>
-            <h3>Ajax-funksjonalitet:</h3>
-            <p>"Contact" siden bruker Ajax. Her sender brukeren en melding til tjeneren(serveren) med navn, epost og meldingen. Da brukeren trykker send sender jQurey en POST-request til serveren uten å oppdatere hele siden, dermed oppdateres kun en liten del av siden. </p>
-            <h3>Bruk av jQurey:</h3>
+            <label>Navigasjonsbaren:</label>
+                Navigasjonsbaren er implementert fra bunnen av med HTML, CSS, Flexbox og bruk av anchors. Navigasjonsbaren er laget for å være dynamisk og fungerer både på små og store skjermer.
+            <label>Ajax-funksjonalitet:</label>
+                "Contact" siden bruker Ajax. Her sender brukeren en melding til tjeneren(serveren) med navn, epost og meldingen. Da brukeren trykker send sender jQurey en POST-request til serveren uten å oppdatere hele siden, dermed oppdateres kun en liten del av siden.
+            <label>Bruk av jQurey:</label>
                 Vi bruker «selector» for å hente ut elementer, enten ved klassenavn eller ved id. «Selector» brukes blant annet til å hente ut tekst, sette inn tekst eller legge til lyttere.
-            De fleste knappene på nettsiden er gjort aktive med jQurey dette gjøres ved å legge til en lytter til elementet. Vi bruker i hovedsak .click() funksjonen. Denne kaller deretter en annen funksjon som gjør noe.
-            Eksempler på dette kan ses på høyre side. De meste brukte jQurey funksjonene på siden er val(), css(), show(), hide() og text().
+                De fleste knappene på nettsiden er gjort aktive med jQurey dette gjøres ved å legge til en lytter til elementet. Vi bruker i hovedsak .click() funksjonen. Denne kaller deretter en annen funksjon som gjør noe.
+                Eksempler på dette kan ses på høyre side. De meste brukte jQurey funksjonene på siden er val(), css(), show(), hide() og text().
 
-
-            <h3>Responsive web design:</h3>
-            <p>Siden tilpasser seg forskjellig skjermstørrelser, vi har tatt utgangspunkt i skjermer med bredde på 1415px, og skjermer med bredde på 768px. Men nettsiden bør fungere på alle normale størrelser. For å få til dette, bruker vi en blanding av CSS teknikker.
+            <label>Responsive web design:</label>
+                Siden tilpasser seg forskjellig skjermstørrelser, vi har tatt utgangspunkt i skjermer med bredde på 1415px, og skjermer med bredde på 768px. Men nettsiden bør fungere på alle normale størrelser. For å få til dette, bruker vi en blanding av CSS teknikker.
                 Vi bruker prosent og rem til å sette størrelser, tillegg bruker vi CSS @meida for å sette forskjellige størrelser for forskjellige skjerm størrelser. Dermed fungerer nettsiden like bra på mobil som på pc.</p>
-            <h3>Arbeidsinnsatsnotat:</h3>
-            <p>Vedlegg med arbeidstimer og oppgaver legges ved på Blackboard.</p>
-
-        </ul>
+            <label>Arbeidsinnsatsnotat:</label>
+                Vedlegg med arbeidstimer og oppgaver legges ved på Blackboard.
+        </div>
     </div>
 </div>
-
 {% endblock %}
